@@ -1,2 +1,2 @@
-# fireflightai-site
+# FireflightPro
 company website
