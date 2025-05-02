@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+  <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FireFlight - Professional Wildfire Risk Assessment Services</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f8f8;
+    }
+
+    p {
+      margin: 1rem 0;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* Navigation Bar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 1.3rem;
+      z-index: 1000;
+      background-color: whitesmoke;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center; /* space-between */
+      list-style-type: none;
+      /* gap: 2rem; */
+    }
+
+    /* .nav-divider {
+      height: 1px;
+      width: 10 px
+      background-color: linear-gradient(90deg, var(--primary-orange), var(--primary-blue));
+    }
+    */
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: color 0.3s ease;
+      padding: 1.3rem;
+    }
+
+    nav a:hover {
+      background-color: white;
+    }
+
+    nav a.ai:hover {
+      color: #0094CC;
+    }
+
+    nav a.wildfire:hover {
+      color: #f76d1d;
+    }
+
+    header {
+      background-color: #003366;
+      color: white;
+      padding: 4rem 0 1.5rem;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #003366;
+    }
+
+    header h1 {
+      color: white;
+    }
+
+    h2 {
+      color: #003366;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    .about h2 {
+      margin-top: 0;
+    }
+
+    .cta h2 {
+      margin-top: 0;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+
+    .hero {
+      background-color: #f0f0f0;
+      padding: 40px;
+      border-radius: 5px;
+      margin: 30px 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .service-card {
+      background-color: white;
+      border-radius: 5px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      color: #ff6600;
+      margin-top: 0;
+    }
+
+    .about {
+      background-color: white;
+      padding: 30px;
+      border-radius: 5px;
+      margin: 40px 0;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .cta {
+      background-color: #ff6600;
+      color: white;
+      text-align: center;
+      padding: 3rem ;
+      border-radius: 5px;
+      margin: 40px 0;
+    }
+
+    .cta h2 {
+      color: white;
+      border-bottom: none;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #003366;
+      color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #002244;
+    }
+
+    .credentials {
+      background-color: #e6f2ff;
+      border-left: 4px solid #003366;
+      padding: 15px;
+      margin: 25px 0;
+    }
+
+    .highlight {
+      background-color: #ffffcc;
+      padding: 2px 5px;
+    }
+
+    /* Footer Styles */
+    #footer {
+      background-color: #02224e;
+      color: floralwhite;
+      padding: 3rem;
+    }
+
+    .footer-container {
+      /* display: grid;
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center; */
+    }
+
+    .footer-about {
+      /* display: flex;
+      align-items: start; */
+      margin-bottom: 2rem;
+      width: 380px;
+    }
+
+    .footer-logo {
+      margin-bottom: 2rem;
+    }
+
+    .footer-logo img {
+      height: 180px;
+      margin-right: 10px;
+    }
+
+    .footer-contact {
+      /*display: flex; */
+      text-align: left;
+    }
+
+    .footer-contact h3 {
+      color: #0094CC;
+      font-size: 1.3rem;
+    }
+
+    .footer-contact li {
+      list-style: none;
+      text-decoration: none;
+    }
+    .footer-contact a {
+      text-decoration: none;
+      color: floralwhite;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact a:hover {
+      color: #0094CC;
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .copyright a {
+      color: floralwhite;
+    }
+
+    .copyright a:hover {
+      color: #0094CC;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <!-- Navbar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ai.html" class="ai">AI</a></li>
+      <!-- <li class="nav-divider"></li> -->
+      <li><a href="wildfire.html" class="wildfire">Wildfire</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1>FireFlight</h1>
+    <p class="tagline">Your Ally in the Sky Against Wildfire Threats</p>
+  </div>
+</header>
+
+<div class="container">
+  <div class="hero">
+    <h1>Professional Wildfire Risk Assessment Services</h1>
+    <p>In Northern Arizona's wildfire-prone landscape, protecting your home requires more than general guidelines – it demands personalized expertise and advanced technology. At FireFlight, we deliver precisely that.</p>
+  </div>
+
+  <h2>When Fire Threatens What Matters Most</h2>
+  <p>The Rafael Fire of 2021 changed everything. Watching flames approach my elderly mother's property in Sycamore Canyon, I felt the unique anxiety that comes from understanding wildfire behavior all too well. As a trained wildland firefighter, I knew exactly how fire runs up canyons – and as a daughter, I worried about my 85-year-old mom potentially evacuating with her beloved pets.</p>
+
+  <p>That experience ignited a mission: to combine my firefighting expertise with my background in data analytics and emerging technology to help property owners truly understand and mitigate their specific wildfire risks.</p>
+
+  <div class="credentials">
+    <h3>Why Trust FireFlight?</h3>
+    <p>As an <strong>NFPA Certified Wildfire Mitigation Specialist</strong> and <strong>FAA Part 107 Licensed Drone Pilot</strong> with real-world experience as a wildland firefighter and a background in emergency services and software development, I bring a rare combination of skills to your property's assessment. This unique qualification set allows me to see vulnerabilities others might miss and develop mitigation strategies that truly work for your specific situation.</p>
+  </div>
+
+  <h2>Beyond Generic Advice: The FireFlight Difference</h2>
+  <p>The standard wildfire preparedness checklist is a starting point – but it's far from sufficient. Generic recommendations don't account for your property's unique topography, vegetation patterns, building materials, or the specific ways wildfire might approach your home. They can't prioritize your limited time and resources where they'll make the greatest impact.</p>
+
+  <p>FireFlight's approach is fundamentally different. We deliver:</p>
+
+  <div class="services">
+    <div class="service-card">
+      <h3>Precision Risk Assessment</h3>
+      <p>Using advanced drone technology and spatial data analysis, we capture detailed imagery and data points specific to your property – identifying vulnerabilities that ground-level inspections often miss. We analyze how wildfire would behave in your specific location, not just generally.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Personalized Mitigation Planning</h3>
+      <p>Your plan will be based on contemporaneous drone imagery, field notes, and fire science – not generic templates. We create a prioritized action list tailored to your property's unique features and your personal circumstances, ensuring you focus first on changes that deliver the greatest protection.</p>
+    </div>
+
+    <div class="service-card">
+      <h3>Comprehensive Support</h3>
+      <p>Beyond assessment and planning, we provide documentation for insurance purposes, connect you with vetted service providers for implementation, and offer ongoing guidance. Your wildfire resilience journey doesn't end with a report – we're your partner throughout the process.</p>
+    </div>
+  </div>
+
+  <div class="about">
+    <h2>From Firefighter to Fire Preventionist: My Third Act</h2>
+    <p>At 66, I'm not winding down – I'm ramping up what I call my "third act." My journey from wildland firefighter to software engineer to FireFlight founder has equipped me with a unique perspective on wildfire threats and solutions.</p>
+
+    <p>As insurance companies increasingly retreat from fire-prone areas or raise rates dramatically, I'm committed to helping property owners document their specific risk levels and mitigation efforts. One day, I hope FireFlight's assessments will become a valuable tool for homeowners negotiating with insurers.</p>
+
+    <p>My mission extends beyond individual properties. As I often tell clients: <span class="highlight">"You can't protect one house effectively in isolation, just like you can't protect one tree in the forest in isolation. We have a responsibility to keep our properties as safe as we can – for ourselves and for everybody else."</span></p>
+  </div>
+
+  <div class="cta">
+    <h2>Protect What Matters Most</h2>
+    <p>Don't wait for evacuation orders to think about wildfire preparedness. A personalized assessment and mitigation plan provides both practical protection and invaluable peace of mind.</p>
+    <a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site" class="btn">Schedule Your Assessment Today</a>
+  </div>
+
+  <h2>Additional Services</h2>
+  <ul>
+    <li><strong>Real Estate Photography and Videography:</strong> Interior and exterior videos and stills, including fly-throughs and 360° tours</li>
+    <li><strong>Roof Inspections and Thermal Energy Assessments:</strong> Identify issues safely and efficiently</li>
+    <li><strong>Solar Panel Performance Checks:</strong> Ensure optimal function and early problem detection</li>
+    <li><strong>Disaster Damage Assessments:</strong> Comprehensive documentation for insurance and recovery planning</li>
+  </ul>
+</div>
+
+<!-- Footer -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="images/lioness-blue-circle-wbg.png" alt="FireFlight Logo"><br />
+          <p class="footer-about">FireFlight provides dual expertise in wildfire prevention and AI business solutions, helping protect what matters most while driving innovation.</p>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Email</a></li>
+          <li><a href="PSTOS.html">Privacy & TOS</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <<div class="copyright">
+    <p>&copy; 2025 FireFlight. All rights reserved.</p>
+    <p>Website by <a href="https://fireflight.ai" class="sponsor">FireFlight</a></p>
+  </div>
+  </div>
+</footer>
+  </body>
+</html>

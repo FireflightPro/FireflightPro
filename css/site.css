@@ -736,29 +736,30 @@ section .about {
 }
 
 /* Footer Styles */
-.footer {
+#footer {
   background-color: var(--accent-midnight);
   color: var(--light-text);
-  padding: 60px 0 30px;
+  padding: 3rem;
 }
 
 .footer-container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
-  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center; */
 }
 
-.footer-info {
-  display: flex;
-  align-items: start;
-  margin-bottom: 20px;
+.footer-about {
+  /* display: flex;
+  align-items: start; */
+  margin-bottom: 2rem;
+  width: 380px;
 }
 
 .footer-logo {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 2rem;
 }
 
 .footer-logo img {
@@ -766,6 +767,11 @@ section .about {
   margin-right: 10px;
 }
 
+
+
+
+
+/*
 .footer-links-container {
   display: flex;
   text-align: right;
@@ -805,13 +811,14 @@ section .about {
   color: var(--primary-blue);
 }
 
-
 .footer-about {
   max-width: 300px;
   margin-bottom: 20px;
   opacity: 0.8;
 }
+*/
 
+/*
 .footer-social {
   display: flex;
   gap: 15px;
@@ -826,13 +833,15 @@ section .about {
 .footer-social a:hover {
   color: var(--primary-blue);
 }
+*/
 
+/*
 .footer-title {
   font-size: 1.2rem;
   margin-bottom: 20px;
   position: relative;
 }
-/*
+
 .footer-title::after {
   content: '';
   position: absolute;
@@ -842,7 +851,6 @@ section .about {
   height: 2px;
   background-color: var(--primary-blue);
 }
-*/
 
 .footer-bottom {
   text-align: center;
@@ -855,11 +863,49 @@ section .about {
   opacity: 0.7;
   font-size: 0.9rem;
 }
+*/
+
+.footer-contact {
+  /*display: flex; */
+  text-align: left;
+}
+
+.footer-contact h3 {
+  color: var(--primary-blue);
+  font-size: 1.3rem;
+}
+
+.footer-contact li {
+  list-style: none;
+  text-decoration: none;
+}
+.footer-contact a {
+  text-decoration: none;
+  color: var(--light-text);
+  margin-bottom: 1rem;
+}
+
+.footer-contact a:hover {
+  color: var(--primary-blue);
+}
 
 .copyright {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 0.9rem;
   text-align: center;
 }
 
+.copyright a {
+  color: var(--light-text);
+}
+
+.copyright a:hover {
+  color: var(--primary-blue);
+}
+
+/*
 @media (min-width: 768px) {
   .footer-container {
     grid-template-columns: repeat(2, 1fr);
@@ -871,7 +917,7 @@ section .about {
     grid-template-columns: 1fr;
   }
 }
-
+*/
 /*
 @media (min-width: 768px) {
   .footer-container {
