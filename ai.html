@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FireFlight AI | Empowering Through Artificial Intelligence</title>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -284,6 +288,46 @@
       color: #0094CC;
     }
 
+    #banner2 {
+      top: 67px;
+      left: 0;
+      z-index: 999;
+      background-color: #f76d1d;
+      padding:
+        0;
+    }
+
+    #banner2 ul {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    #banner2 li {
+      display: flow-root;
+      vertical-align: middle;
+      font-size: 1.2rem;
+      font-weight: 600;
+      list-style-type: none;
+      text-align: center;
+      color: floralwhite;
+      padding: .8rem;
+    }
+
+    #banner2 .more-button {
+      background-color: var(--accent-gold);
+      white-space: nowrap;
+    }
+
+    #banner2 a.event {
+      text-decoration: none;
+      color: #555;
+    }
+
+    #banner2 a.event:hover {
+      color: floralwhite;
+    }
+
   </style>
 </head>
 <body>
@@ -299,10 +343,19 @@
         <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Contact</a></li>
       </ul>
     </nav>
-  <div class="container">
+  <!-- Grand Opening Banner -->
+  <section id="banner2">
+    <ul>
+      <li>Join Us for Free Workshops at Our Grand Opening</li>
+      <li>May 28, 2025</li>
+      <li class="more-button"><a href="grand-opening.html" class="event">Learn More</a></li>
+    </ul>
+  </section>
+
+  <section class="container">
     <h1>FireFlight AI Solutions</h1>
     <p class="tagline">Where Technology Meets Human Potential</p>
-  </div>
+  </section>
 </header>
 
 <section class="container">
