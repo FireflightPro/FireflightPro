@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sparkly Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #1fbbf9;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 300;
+            margin: 0;
+        }
+    
+        .main p {
+            max-width: 600px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin: 3rem;
+            color: #333;
+            text-align: left;   
+        }
+    </style>
+    
+</head>
+<body class="demo">
+<div class="header"> 
+  <h1>A Basic Chatbot Demo</h1>
+</div>
+<div class="main">
+    <p>Welcome to a demo of a basic chatbot. The chatbot is designed to answer user questions about a home cleaning service, but chatbots can be created for any type of business or service by training, and then fine-tuning, a machine learning model on a customized knowledge base specific to the particular business intent.</p>
+    
+    <p>This chatbot uses a simple question and answer format, where you can ask questions and receive answers in real-time. It is also designed to be responsive, so it will work on any device, including smartphones and tablets.</p>
+
+    <p>To use the chatbot, type your question in the text field, then click on the arrow button to send your request. The chatbot will respond with an answer based on its training data.</p>
+
+    <p>You can ask about prices and what services are offered. It will in turn ask you questions and, if you wish to book cleaning services, it will request you provide contact details and information about the which cleaning services you are interested in. These details are stored in a database for later retrieval by other business automation tools used for appointment scheduling or other follow up.</p>
+</div>
+
+<div>
+  <script type="text/javascript">
+    (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        if (!document.getElementById('root')) {
+          var root = d.createElement('div');
+          root.id = 'root';
+          d.body.appendChild(root);
+        }
+        if (window.myChatWidget && typeof window.myChatWidget.load === 'function') {
+          window.myChatWidget.load({
+            id: 'eb14199e-1f7f-404e-81ff-30d929c47399',
+          });
+        }
+      };
+      v.src = "https://agentivehub.com/production.bundle.min.js";
+      v.type = "text/javascript";
+      s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</div>
+
+</body>
+</html>
