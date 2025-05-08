@@ -125,6 +125,17 @@ img {
   transform: translateY(-2px);
 }
 
+.btn-ai {
+  background-color: var(--primary-blue);
+  color: var(--light-text);
+}
+
+.btn-ai:hover {
+  background-color: #0876c4;
+  transform: translateY(-2px);
+}
+
+
 
 /* .btn {
   display: inline-block;
@@ -263,7 +274,18 @@ nav a {
 }
 
 nav a:hover {
-  background-color: white;
+  background-color: #fff;
+}
+
+nav a.this-page {
+  color: #ccc;
+  background-color: whitesmoke;
+}
+
+nav a.this-page:hover{
+  color: #ccc;
+  background-color: whitesmoke;
+
 }
 
 nav a.ai:hover {
@@ -272,6 +294,10 @@ nav a.ai:hover {
 
 nav a.wildfire:hover {
   color: var(--primary-orange);
+}
+
+#about {
+  padding: 0;
 }
 
 /* Grand Opening Banner */
@@ -638,7 +664,6 @@ a.btn-wildfire:hover {
 
 .about-content {
   flex: 1;
-  padding: 40px;
 }
 
 .about-title {
@@ -654,7 +679,8 @@ a.btn-wildfire:hover {
   left: 0;
   width: 60px;
   height: 3px;
-  background: linear-gradient(90deg, var(--primary-orange), var(--primary-blue));
+  /*
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-blue)); */
 }
 
 .about h3 {
