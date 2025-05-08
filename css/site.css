@@ -263,7 +263,6 @@ nav ul {
   background-color: linear-gradient(90deg, var(--primary-orange), var(--primary-blue));
 }
 */
-
 nav a {
   color: var(--dark-text);
   text-decoration: none;
