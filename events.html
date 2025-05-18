@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FireFlight Events - Tuesday, May 28th, 2025</title>
+    <!-- <link rel="stylesheet" href="css/site.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <style>
+      :root {
+        --primary-orange: #f76d1d;
+        --primary-red-orange: #f52f28;
+        --primary-red: #ca2b07;
+        --primary-blue: #0094CC;
+        --accent-gold: #fdd242;
+        --accent-lightgold: #fae088;
+        --accent-navy: #1d3557;
+        --accent-midnight: #013683;
+        --accent-green: #2a9d8f;
+        --light-bg: #f8f9fa;
+        --dark-text: #333;
+        --light-text: #fff;
+        --transition: all 0.2s ease;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      body {
+        line-height: 1.6;
+        color: var(--dark-text);
+        overflow-x: hidden;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .container {
+        max-width: 1140px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+
+      /* Navigation Bar */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.3rem;
+        z-index: 1000;
+        background-color: whitesmoke;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      nav ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+      }
+
+      nav a {
+        color: var(--dark-text);
+        text-decoration: none;
+        font-weight: 600;
+        text-align: center;
+        transition: color 0.3s ease;
+        padding: 1.3rem;
+      }
+
+      nav a:hover {
+        background-color: white;
+      }
+
+      nav a.ai:hover {
+        color: var(--primary-blue);
+      }
+
+      nav a.wildfire:hover {
+        color: var(--primary-orange);
+      }
+
+      /* Hero Section */
+      .hero {
+        padding-top: 120px;
+        padding-bottom: 60px;
+        background: linear-gradient(135deg, rgba(255, 126, 0, 0.1) 0%, rgba(0, 180, 216, 0.1) 100%);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: var(--primary-orange);
+        font-weight: 700;
+      }
+
+      .hero-date {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 30px;
+        color: var(--accent-midnight);
+      }
+
+      .hero-subtitle {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+        color: var(--accent-midnight);
+      }
+
+      /* Event Schedule Section */
+      .schedule {
+        padding: 60px 0;
+        background-color: var(--light-bg);
+      }
+
+      .schedule-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: var(--accent-midnight);
+      }
+
+      .schedule-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .schedule-item {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      .schedule-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .schedule-time {
+        background-color: var(--primary-orange);
+        color: white;
+        padding: 15px;
+        font-weight: 600;
+        font-size: 1.1rem;
+      }
+
+      .schedule-content {
+        color: var(--accent-midnight);
+        padding: 20px;
+      }
+
+      .schedule-content h3 {
+
+        margin-bottom: 10px;
+      }
+
+      /* Workshop Section */
+      .workshops {
+        padding: 60px 0;
+      }
+
+      .workshops-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: var(--primary-blue);
+      }
+
+      .workshop-container {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin: 0 auto;
+        max-width: 1000px;
+      }
+
+      .workshop-card {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+      }
+
+      .workshop-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .workshop-header {
+        padding: 20px;
+        background: linear-gradient(90deg, var(--primary-blue), var(--accent-navy));
+        color: white;
+      }
+
+      .workshop-time {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+      }
+
+      .workshop-title {
+        font-size: 1.4rem;
+        margin-bottom: 5px;
+      }
+
+      .workshop-content {
+        padding: 25px;
+      }
+
+      .workshop-content p {
+        padding-bottom: 1rem;
+      }
+
+      .workshop-description {
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      .workshop-note {
+        font-style: italic;
+        color: #666;
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+        margin-top: 15px;
+      }
+
+      /* About Section */
+      .about {
+        padding: 60px 0;
+        background-color: var(--light-bg);
+      }
+
+      .about-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: var(--primary-blue);
+      }
+
+      .about-container {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .about-text {
+        background-color: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .about-text h3 {
+        color: var(--primary-orange);
+        margin-bottom: 15px;
+      }
+
+      /* Speaker Section */
+      .speaker {
+        padding: 60px 0;
+      }
+
+      .speaker-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: var(--accent-navy);
+      }
+
+      .speaker-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 8px;
+        padding: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .speaker-image {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+        border: 5px solid var(--primary-blue);
+      }
+
+      .speaker-name {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        color: var(--accent-navy);
+      }
+
+      .speaker-bio {
+        text-align: center;
+        color: #555;
+      }
+
+      /* Registration Section */
+      .registration {
+        padding: 60px 0;
+        background-color: var(--accent-navy);
+        color: white;
+      }
+
+      .registration-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      .registration-text {
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 30px;
+        opacity: 0.9;
+      }
+
+      .registration-cta {
+        display: flex;
+        justify-content: center;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 12px 30px;
+        font-weight: 600;
+        text-decoration: none;
+        text-align: center;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        transition: var(--transition);
+      }
+
+      ul {
+        padding: 1rem 2rem 0 2rem ;
+      }
+      .btn-primary {
+        background-color: var(--primary-blue);
+        color: var(--light-text);
+      }
+
+      .btn-primary:hover {
+        background-color: floralwhite;
+        color: var(--primary-blue);
+        transform: translateY(-3px);
+      }
+
+      /* Footer Styles */
+      #footer {
+        background-color: #02224e;
+        color: floralwhite;
+        padding: 3rem;
+      }
+
+      .footer-container {
+        /* display: grid;
+        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center; */
+      }
+
+      .footer-about {
+        /* display: flex;
+        align-items: start; */
+        margin-bottom: 2rem;
+        width: 380px;
+      }
+
+      .footer-logo {
+        margin-bottom: 2rem;
+      }
+
+      .footer-logo img {
+        height: 180px;
+        margin-right: 10px;
+      }
+
+      .footer-contact {
+        /*display: flex; */
+        text-align: left;
+      }
+
+      .footer-contact h3 {
+        color: #0094CC;
+        font-size: 1.3rem;
+      }
+
+      .footer-contact li {
+        list-style: none;
+        text-decoration: none;
+      }
+      .footer-contact a {
+        text-decoration: none;
+        color: floralwhite;
+        margin-bottom: 1rem;
+      }
+
+      .footer-contact a:hover {
+        color: #0094CC;
+      }
+
+      .copyright {
+        margin-top: 2rem;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        font-size: 0.9rem;
+        text-align: center;
+      }
+
+      .copyright a {
+        color: floralwhite;
+      }
+
+      .copyright a:hover {
+        color: #0094CC;
+      }
+
+      /* Media Queries */
+      @media (min-width: 768px) {
+        .workshop-container {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .workshop-card {
+          flex: 1 1 45%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2rem;
+        }
+
+        .hero-date {
+          font-size: 1.5rem;
+        }
+
+        .workshop-header {
+          padding: 15px;
+        }
+
+        .workshop-title {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="ai.html" class="ai">AI</a></li>
+          <li><a href="wildfire.html" class="wildfire">Wildfire</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Contact</a></li>
+        </ul>
+      </nav>
+      <!-- Landing-Banner -->
+      <section id="landing-banner">
+        <h3>FireFlight Free Workshops @ Moonshot May 28, 2025</h3>
+      </section>
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-container container">
+          <img src="images/LionessSiteBanner1.png" alt="FireFlight Lioness Logo" class="hero-logo">
+          <h1 class="hero-title">FireFlight Free Workshops</h1>
+          <h2 class="hero-date">Wednesday, May 28th, 2025</h2>
+          <p class="hero-subtitle">
+            Moonshot Headquarters<br />
+            Flagstaff Campus<br />
+            2225 N. Gemini Dr.<br />
+            Flagstaff, AZ 86001
+          </p>
+        </div>
+      </section>
+    </header>
+    <main>
+      <!-- Event Schedule Section -->
+      <section class="schedule">
+        <div class="container">
+          <h2 class="schedule-title">Events</h2>
+          <div class="schedule-container">
+
+            <div class="schedule-item">
+              <div class="schedule-time">11:00 AM - 12:00 PM</div>
+              <div class="schedule-content">
+                <h3>Navigating Risks and Opportunities: AI Essentials for Small Businesses</h3>
+                <p>A morning workshop designed for small business owners, freelancers, and employees who want to not just survive, but thrive, in a world increasingly driven by artificial intelligence.</p>
+              </div>
+            </div>
+
+            <div class="schedule-item">
+              <div class="schedule-time">12:00 PM - 1:00 PM</div>
+              <div class="schedule-content">
+                <h3>Networking & Refreshments</h3>
+                <p>Connect with other workshop attendees and enjoy complimentary refreshments</p>
+              </div>
+            </div>
+            <div class="schedule-item">
+              <div class="schedule-time">1:00 PM - 2:00 PM</div>
+              <div class="schedule-content">
+                <h3>Wildfire Risk: Essential Communication Tools for Real Estate Professionals</h3>
+                <p>An afternoon workshop to empower agents and other real estate professionals to help clients make informed decisions around wildfire risk when buying, selling, or investing in real estate.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Workshops Section -->
+      <section class="workshops">
+        <div class="container">
+          <h2 class="workshops-title">Workshop Details</h2>
+          <div class="workshop-container">
+            <div class="workshop-card">
+              <div class="workshop-header">
+                <p class="workshop-time">11:00 AM - 12:00 PM</p>
+                <h3 class="workshop-title">Navigating Risks and Opportunities: AI Essentials for Small Business</h3>
+                <p>Accelerator Conference Room</p>
+              </div>
+              <div class="workshop-content">
+                <p class="workshop-description">Don't let fear or uncertainty about artificial intelligence hold you back! This workshop provides specific strategies and tactics to thrive in the age of AI, whether you are a freelancer, small business owner, or an employee worried about your job.</p>
+                <p>Learn how you can leverage this transformative technology to effectively gain a competitive edge in today's rapidly evolving business landscape.</p>
+                <p>Taught by Ariel Strong, the founder of FireFlight. She teaches the <a href="https://ccc-flagstaff.coursestorm.com/course/ai-for-everyone1">"AI for Everyone" course</a> at Coconino Community College and leads the <a href="https://noazai.org">"Northern Arizona AI Meetup</a>.</p>
+
+                <p class="workshop-note">Refreshments provided. Pre-registration required.</p>
+                <div class="registration-cta">
+                  <a href="https://www.eventbrite.com/e/the-ai-advantage-for-small-business-tickets-1334035549239" class="btn btn-primary">Register Now</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="workshop-card">
+              <div class="workshop-header">
+                <p class="workshop-time">1:00 PM - 2:00 PM</p>
+                <h3 class="workshop-title">Navigating Wildfire Risk: Essential Tools for Real Estate Professionals</h3>
+                <p>Accelerator Conference Room</p>
+              </div>
+              <div class="workshop-content">
+                <p class="workshop-description">Your clients have concerns about wildfire risk, insurance availability and affordability, and how to protect their property investments.</p>
+                <p>Learn where to point them for reliable information, and how to help them understand their options and feel empowered as they make important decisions around buying, selling, or investing in real estate in "wildfire country."</p>
+                <p>Get expert insights, free informational resources you can share with clients, and expert insights from Ariel Strong, a National Fire Protection Association Certified Wildfire Risk Mitigation Specialist.</p>
+                <p class="workshop-note">Refreshments provided. Pre-registration required.</p>
+                <div class="registration-cta">
+                  <a href="https://www.eventbrite.com/e/essential-tools-for-real-estate-professionals-tickets-1334230502349" class="btn btn-primary">Register Now</a>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="about-title">About FireFlight</h2>
+          <div class="about-container">
+            <div class="about-text">
+              <p>At Fireflight, our mission is to help you protect what matters most—your family, your home, and your livelihood—through cutting-edge technology. We serve in two critical areas, united by a commitment to risk management, resilience, and innovation:</p>
+            </div>
+            <div class="about-text">
+              <h3>AI Solutions for Small Businesses</h3>
+              <p>As an AI solutions provider, we empower both workers and small business owners to navigate the fast-changing landscape of artificial intelligence with confidence. Through customized training, strategy consultation, and process automation, we help you understand and harness AI to protect your business, reduce risk, and unlock new opportunities. Our approach is practical, people-centered, and focused on long-term sustainability.</p>
+            </div>
+            <div class="about-text">
+              <h3>Wildfire Risk Management</h3>
+              <p>We help communities and property owners stay one step ahead of wildfire threats. Fireflight uses advanced AI to analyze wildfire risk and create actionable mitigation strategies, all validated and communicated to you by certified wildfire mitigation specialists—human to human. From individual properties to entire neighborhoods, our goal is to protect homes and lives through intelligent, data-driven fire risk assessment and planning.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Speaker Section -->
+      <section class="speaker">
+        <div class="container">
+          <h2 class="speaker-title">Meet Our Founder</h2>
+          <div class="speaker-container">
+            <!-- <img src="/api/placeholder/400/400" alt="Ariel Strong" class="speaker-image"> -->
+            <h3 class="speaker-name">Ariel Strong</h3>
+            <p class="speaker-bio">From battling wildfires on the ground to building intelligent systems to help prevent them, Ariel Strong has always been driven to protect people and communities. She left a career in software engineering and leadership to found Fireflight and fuse her love of fire science with the power of AI. Now, she helps small businesses and everyday people use AI to stay safe, stay smart, and stay ahead.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Registration Section -->
+      <!-- <section class="registration">
+        <div class="container">
+          <h2 class="registration-title">Join Us!</h2>
+          <p class="registration-text">Spaces are limited for our free workshops. Pre-registration is required to secure your spot at these valuable educational sessions. Don't miss this opportunity to learn from experts and connect with other professionals.</p>
+          <div class="registration-cta">
+            <a href="mailto:ariel@fireflight.pro?subject=Grand Opening Registration" class="btn btn-primary">Register Now</a>
+          </div>
+        </div>
+      </section> -->
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer-container">
+        <div class="footer-info">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <img src="images/lioness-blue-circle-wbg.png" alt="FireFlight Logo"><br />
+              <p class="footer-about">FireFlight provides dual expertise in wildfire prevention and AI business solutions, helping protect what matters most while driving innovation.</p>
+            </div>
+          </div>
+
+          <div class="footer-contact">
+            <h3>Contact Us</h3>
+            <ul>
+              <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Email</a></li>
+              <li><a href="PSTOS.html">Privacy & TOS</a></li>
+            </ul>
+          </div>
+
+        </div>
+        <div class="copyright">
+          <p>&copy; 2025 FireFlight. All rights reserved.</p>
+          <p>Website by <a href="https://fireflight.ai" class="sponsor">FireFlight</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
