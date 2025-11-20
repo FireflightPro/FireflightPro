@@ -1,661 +1,625 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>FireFlight Events - Tuesday, May 28th, 2025</title>
-    <!-- <link rel="stylesheet" href="css/site.css"> -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
-    <style>
-      :root {
-        --primary-orange: #f76d1d;
-        --primary-red-orange: #f52f28;
-        --primary-red: #ca2b07;
-        --primary-blue: #0094CC;
-        --accent-gold: #fdd242;
-        --accent-lightgold: #fae088;
-        --accent-navy: #1d3557;
-        --accent-midnight: #013683;
-        --accent-green: #2a9d8f;
-        --light-bg: #f8f9fa;
-        --dark-text: #333;
-        --light-text: #fff;
-        --transition: all 0.2s ease;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      body {
-        line-height: 1.6;
-        color: var(--dark-text);
-        overflow-x: hidden;
-      }
-
-      img {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .container {
-        max-width: 1140px;
-        margin: 0 auto;
-        padding: 0 20px;
-      }
-
-      /* Navigation Bar */
-      nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        padding: 1.3rem;
-        z-index: 1000;
-        background-color: whitesmoke;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      nav ul {
-        display: flex;
-        justify-content: center;
-        list-style-type: none;
-      }
-
-      nav a {
-        color: var(--dark-text);
-        text-decoration: none;
-        font-weight: 600;
-        text-align: center;
-        transition: color 0.3s ease;
-        padding: 1.3rem;
-      }
-
-      nav a:hover {
-        background-color: white;
-      }
-
-      nav a.ai:hover {
-        color: var(--primary-blue);
-      }
-
-      nav a.wildfire:hover {
-        color: var(--primary-orange);
-      }
-
-      /* Hero Section */
-      .hero {
-        padding-top: 120px;
-        padding-bottom: 60px;
-        background: linear-gradient(135deg, rgba(255, 126, 0, 0.1) 0%, rgba(0, 180, 216, 0.1) 100%);
-        position: relative;
-        overflow: hidden;
-        text-align: center;
-      }
-
-      .hero-title {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: var(--primary-orange);
-        font-weight: 700;
-      }
-
-      .hero-date {
-        font-size: 1.8rem;
-        font-weight: 600;
-        margin-bottom: 30px;
-        color: var(--accent-midnight);
-      }
-
-      .hero-subtitle {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-        color: var(--accent-midnight);
-      }
-
-      /* Event Schedule Section */
-      .schedule {
-        padding: 60px 0;
-        background-color: var(--light-bg);
-      }
-
-      .schedule-title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: var(--accent-midnight);
-      }
-
-      .schedule-container {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .schedule-item {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: var(--transition);
-      }
-
-      .schedule-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .schedule-time {
-        background-color: var(--primary-orange);
-        color: white;
-        padding: 15px;
-        font-weight: 600;
-        font-size: 1.1rem;
-      }
-
-      .schedule-content {
-        color: var(--accent-midnight);
-        padding: 20px;
-      }
-
-      .schedule-content h3 {
-
-        margin-bottom: 10px;
-      }
-
-      /* Workshop Section */
-      .workshops {
-        padding: 60px 0;
-      }
-
-      .workshops-title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: var(--primary-blue);
-      }
-
-      .workshop-container {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-        margin: 0 auto;
-        max-width: 1000px;
-      }
-
-      .workshop-card {
-        display: flex;
-        flex-direction: column;
-        background-color: white;
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        transition: var(--transition);
-      }
-
-      .workshop-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      }
-
-      .workshop-header {
-        padding: 20px;
-        background: linear-gradient(90deg, var(--primary-blue), var(--accent-navy));
-        color: white;
-      }
-
-      .workshop-time {
-        font-weight: 600;
-        margin-bottom: 10px;
-        font-size: 1.1rem;
-      }
-
-      .workshop-title {
-        font-size: 1.4rem;
-        margin-bottom: 5px;
-      }
-
-      .workshop-content {
-        padding: 25px;
-      }
-
-      .workshop-content p {
-        padding-bottom: 1rem;
-      }
-
-      .workshop-description {
-        margin-bottom: 20px;
-        color: #555;
-      }
-
-      .workshop-note {
-        font-style: italic;
-        color: #666;
-        border-top: 1px solid #eee;
-        padding-top: 15px;
-        margin-top: 15px;
-      }
-
-      /* About Section */
-      .about {
-        padding: 60px 0;
-        background-color: var(--light-bg);
-      }
-
-      .about-title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: var(--primary-blue);
-      }
-
-      .about-container {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .about-text {
-        background-color: white;
-        padding: 25px;
-        border-radius: 8px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .about-text h3 {
-        color: var(--primary-orange);
-        margin-bottom: 15px;
-      }
-
-      /* Speaker Section */
-      .speaker {
-        padding: 60px 0;
-      }
-
-      .speaker-title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 40px;
-        color: var(--accent-navy);
-      }
-
-      .speaker-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 700px;
-        margin: 0 auto;
-        background-color: white;
-        border-radius: 8px;
-        padding: 30px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      }
-
-      .speaker-image {
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        object-fit: cover;
-        border: 5px solid var(--primary-blue);
-      }
-
-      .speaker-name {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: var(--accent-navy);
-      }
-
-      .speaker-bio {
-        text-align: center;
-        color: #555;
-      }
-
-      /* Registration Section */
-      .registration {
-        padding: 60px 0;
-        background-color: var(--accent-navy);
-        color: white;
-      }
-
-      .registration-title {
-        text-align: center;
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
-
-      .registration-text {
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto 30px;
-        opacity: 0.9;
-      }
-
-      .registration-cta {
-        display: flex;
-        justify-content: center;
-      }
-
-      .btn {
-        display: inline-block;
-        padding: 12px 30px;
-        font-weight: 600;
-        text-decoration: none;
-        text-align: center;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1.1rem;
-        transition: var(--transition);
-      }
-
-      ul {
-        padding: 1rem 2rem 0 2rem ;
-      }
-      .btn-primary {
-        background-color: var(--primary-blue);
-        color: var(--light-text);
-      }
-
-      .btn-primary:hover {
-        background-color: floralwhite;
-        color: var(--primary-blue);
-        transform: translateY(-3px);
-      }
-
-      /* Footer Styles */
-      #footer {
-        background-color: #02224e;
-        color: floralwhite;
-        padding: 3rem;
-      }
-
-      .footer-container {
-        /* display: grid;
-        grid-template-columns: 1fr;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        align-items: center; */
-      }
-
-      .footer-about {
-        /* display: flex;
-        align-items: start; */
-        margin-bottom: 2rem;
-        width: 380px;
-      }
-
-      .footer-logo {
-        margin-bottom: 2rem;
-      }
-
-      .footer-logo img {
-        height: 180px;
-        margin-right: 10px;
-      }
-
-      .footer-contact {
-        /*display: flex; */
-        text-align: left;
-      }
-
-      .footer-contact h3 {
-        color: #0094CC;
-        font-size: 1.3rem;
-      }
-
-      .footer-contact li {
-        list-style: none;
-        text-decoration: none;
-      }
-      .footer-contact a {
-        text-decoration: none;
-        color: floralwhite;
-        margin-bottom: 1rem;
-      }
-
-      .footer-contact a:hover {
-        color: #0094CC;
-      }
-
-      .copyright {
-        margin-top: 2rem;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255,255,255,0.1);
-        font-size: 0.9rem;
-        text-align: center;
-      }
-
-      .copyright a {
-        color: floralwhite;
-      }
-
-      .copyright a:hover {
-        color: #0094CC;
-      }
-
-      /* Media Queries */
-      @media (min-width: 768px) {
-        .workshop-container {
-          flex-direction: row;
-          flex-wrap: wrap;
-        }
-
-        .workshop-card {
-          flex: 1 1 45%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        .hero-title {
-          font-size: 2rem;
-        }
-
-        .hero-date {
-          font-size: 1.5rem;
-        }
-
-        .workshop-header {
-          padding: 15px;
-        }
-
-        .workshop-title {
-          font-size: 1.2rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <!-- Navbar -->
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="ai.html" class="ai">AI</a></li>
-          <li><a href="wildfire.html" class="wildfire">Wildfire</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Contact</a></li>
-        </ul>
-      </nav>
-      <!-- Landing-Banner -->
-      <!-- <section id="landing-banner">
-        <h3>FireFlight Free Workshops @ Moonshot May 28, 2025</h3>
-      </section> -->
-      <!-- Hero Section -->
-      <section class="hero">
-        <div class="hero-container container">
-          <img src="images/LionessSiteBanner1.png" alt="FireFlight Lioness Logo" class="hero-logo">
-          <h1 class="hero-title">FireFlight Free Workshops</h1>
-          <h2 class="hero-date">Wednesday, May 28th, 2025</h2>
-          <p class="hero-subtitle">
-            Moonshot Headquarters<br />
-            Flagstaff Campus<br />
-            2225 N. Gemini Dr.<br />
-            Flagstaff, AZ 86001
-          </p>
-        </div>
-      </section>
-    </header>
-    <main>
-      <!-- Event Schedule Section -->
-      <section class="schedule">
-        <div class="container">
-          <h2 class="schedule-title">Events</h2>
-          <div class="schedule-container">
-
-            <div class="schedule-item">
-              <div class="schedule-time">11:00 AM - 12:00 PM</div>
-              <div class="schedule-content">
-                <h3>Navigating Risks and Opportunities: AI Essentials for Small Businesses</h3>
-                <p>A morning workshop designed for small business owners, freelancers, and employees who want to not just survive, but thrive, in a world increasingly driven by artificial intelligence.</p>
-              </div>
-            </div>
-
-            <div class="schedule-item">
-              <div class="schedule-time">12:00 PM - 1:00 PM</div>
-              <div class="schedule-content">
-                <h3>Networking & Refreshments</h3>
-                <p>Connect with other workshop attendees and enjoy complimentary refreshments</p>
-              </div>
-            </div>
-            <div class="schedule-item">
-              <div class="schedule-time">1:00 PM - 2:00 PM</div>
-              <div class="schedule-content">
-                <h3>Wildfire Risk: Essential Communication Tools for Real Estate Professionals</h3>
-                <p>An afternoon workshop to empower agents and other real estate professionals to help clients make informed decisions around wildfire risk when buying, selling, or investing in real estate.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Workshops Section -->
-      <section class="workshops">
-        <div class="container">
-          <h2 class="workshops-title">Workshop Details</h2>
-          <div class="workshop-container">
-            <div class="workshop-card">
-              <div class="workshop-header">
-                <p class="workshop-time">11:00 AM - 12:00 PM</p>
-                <h3 class="workshop-title">Navigating Risks and Opportunities: AI Essentials for Small Business</h3>
-                <p>Accelerator Conference Room</p>
-              </div>
-              <div class="workshop-content">
-                <p class="workshop-description">Don't let fear or uncertainty about artificial intelligence hold you back! This workshop provides specific strategies and tactics to thrive in the age of AI, whether you are a freelancer, small business owner, or an employee worried about your job.</p>
-                <p>Learn how you can leverage this transformative technology to effectively gain a competitive edge in today's rapidly evolving business landscape.</p>
-                <p>Taught by Ariel Strong, the founder of FireFlight. She teaches the <a href="https://ccc-flagstaff.coursestorm.com/course/ai-for-everyone1">"AI for Everyone" course</a> at Coconino Community College and leads the <a href="https://noazai.org">"Northern Arizona AI Meetup</a>.</p>
-
-                <p class="workshop-note">Refreshments provided. Pre-registration required.</p>
-                <div class="registration-cta">
-                  <a href="https://www.eventbrite.com/e/the-ai-advantage-for-small-business-tickets-1334035549239" class="btn btn-primary">Register Now</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="workshop-card">
-              <div class="workshop-header">
-                <p class="workshop-time">1:00 PM - 2:00 PM</p>
-                <h3 class="workshop-title">Navigating Wildfire Risk: Essential Tools for Real Estate Professionals</h3>
-                <p>Accelerator Conference Room</p>
-              </div>
-              <div class="workshop-content">
-                <p class="workshop-description">Your clients have concerns about wildfire risk, insurance availability and affordability, and how to protect their property investments.</p>
-                <p>Learn where to point them for reliable information, and how to help them understand their options and feel empowered as they make important decisions around buying, selling, or investing in real estate in "wildfire country."</p>
-                <p>Get expert insights, free informational resources you can share with clients, and expert insights from Ariel Strong, a National Fire Protection Association Certified Wildfire Risk Mitigation Specialist.</p>
-                <p class="workshop-note">Refreshments provided. Pre-registration required.</p>
-                <div class="registration-cta">
-                  <a href="https://www.eventbrite.com/e/essential-tools-for-real-estate-professionals-tickets-1334230502349" class="btn btn-primary">Register Now</a>
-                </div>
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about" id="about">
-        <div class="container">
-          <h2 class="about-title">About FireFlight</h2>
-          <div class="about-container">
-            <div class="about-text">
-              <p>At Fireflight, our mission is to help you protect what matters most—your family, your home, and your livelihood—through cutting-edge technology. We serve in two critical areas, united by a commitment to risk management, resilience, and innovation:</p>
-            </div>
-            <div class="about-text">
-              <h3>AI Solutions for Small Businesses</h3>
-              <p>As an AI solutions provider, we empower both workers and small business owners to navigate the fast-changing landscape of artificial intelligence with confidence. Through customized training, strategy consultation, and process automation, we help you understand and harness AI to protect your business, reduce risk, and unlock new opportunities. Our approach is practical, people-centered, and focused on long-term sustainability.</p>
-            </div>
-            <div class="about-text">
-              <h3>Wildfire Risk Management</h3>
-              <p>We help communities and property owners stay one step ahead of wildfire threats. Fireflight uses advanced AI to analyze wildfire risk and create actionable mitigation strategies, all validated and communicated to you by certified wildfire mitigation specialists—human to human. From individual properties to entire neighborhoods, our goal is to protect homes and lives through intelligent, data-driven fire risk assessment and planning.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Speaker Section -->
-      <section class="speaker">
-        <div class="container">
-          <h2 class="speaker-title">Meet Our Founder</h2>
-          <div class="speaker-container">
-            <!-- <img src="/api/placeholder/400/400" alt="Ariel Strong" class="speaker-image"> -->
-            <h3 class="speaker-name">Ariel Strong</h3>
-            <p class="speaker-bio">From battling wildfires on the ground to building intelligent systems to help prevent them, Ariel Strong has always been driven to protect people and communities. She left a career in software engineering and leadership to found Fireflight and fuse her love of fire science with the power of AI. Now, she helps small businesses and everyday people use AI to stay safe, stay smart, and stay ahead.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Registration Section -->
-      <!-- <section class="registration">
-        <div class="container">
-          <h2 class="registration-title">Join Us!</h2>
-          <p class="registration-text">Spaces are limited for our free workshops. Pre-registration is required to secure your spot at these valuable educational sessions. Don't miss this opportunity to learn from experts and connect with other professionals.</p>
-          <div class="registration-cta">
-            <a href="mailto:ariel@fireflight.pro?subject=Grand Opening Registration" class="btn btn-primary">Register Now</a>
-          </div>
-        </div>
-      </section> -->
-    </main>
-
-    <!-- Footer -->
-    <footer id="footer">
-      <div class="footer-container">
-        <div class="footer-info">
-          <div class="footer-about">
-            <div class="footer-logo">
-              <img src="images/lioness-blue-circle-wbg.png" alt="FireFlight Logo"><br />
-              <p class="footer-about">FireFlight provides dual expertise in wildfire prevention and AI business solutions, helping protect what matters most while driving innovation.</p>
-            </div>
-          </div>
-
-          <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <ul>
-              <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Email</a></li>
-              <li><a href="PSTOS.html">Privacy & TOS</a></li>
-            </ul>
-          </div>
-
-        </div>
-        <div class="copyright">
-          <p>&copy; 2025 FireFlight. All rights reserved.</p>
-          <p>Website by <a href="https://fireflight.ai" class="sponsor">FireFlight</a></p>
-        </div>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>From Inbox to Impact | AI Writing Workshop</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      color: #2d3748;
+      background: #ffffff;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3em;
+      font-weight: 800;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero .subtitle {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      opacity: 0.95;
+      font-weight: 300;
+    }
+
+    .workshop-details {
+      background: rgba(255,255,255,0.15);
+      padding: 20px;
+      border-radius: 8px;
+      display: inline-block;
+      margin: 20px 0;
+      backdrop-filter: blur(10px);
+    }
+
+    .workshop-details p {
+      font-size: 1.2em;
+      margin: 8px 0;
+      font-weight: 500;
+    }
+
+    .hero .cta {
+      background: #fbbf24;
+      color: #1f2937;
+      padding: 18px 40px;
+      font-size: 1.2em;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .hero .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    .pain-points {
+      /*background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);*/
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .pain-points h2 {
+      font-size: 2.5em;
+      margin-bottom: 40px;
+      /* color: #92400e;*/
+      color: #0c4a6e;
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .pain-item {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .pain-item h3 {
+      /*color: #dc2626;*/
+      color: #0c4a6e;
+      margin-bottom: 15px;
+      font-size: 1.3em;
+    }
+
+    .solution {
+      background: white;
+      padding: 60px 20px;
+    }
+
+    .solution h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #1f2937;
+    }
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .benefit-card {
+      padding: 30px;
+      border-left: 4px solid #14b8a6;
+      background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+      border-radius: 8px;
+    }
+
+    .benefit-card h3 {
+      color: #0f766e;
+      font-size: 1.5em;
+      margin-bottom: 15px;
+    }
+
+    .benefit-card .number {
+      display: inline-block;
+      background: linear-gradient(135deg, #14b8a6 0%, #0891b2 100%);
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 40px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .hands-on {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .hands-on h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      color: #0c4a6e;
+    }
+
+    .hands-on-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .hands-on-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+
+    .hands-on-item {
+      padding: 25px;
+      background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+      border-radius: 8px;
+      border-top: 4px solid #14b8a6;
+    }
+
+    .hands-on-item h3 {
+      color: #0f766e;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .what-you-get {
+      background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .what-you-get h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .deliverables {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .deliverable {
+      background: rgba(255,255,255,0.1);
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #14b8a6;
+    }
+
+    .deliverable h3 {
+      color: #5eead4;
+      margin-bottom: 10px;
+      font-size: 1.4em;
+    }
+
+    .instructors {
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+    }
+
+    .instructors h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #14532d;
+    }
+
+    .instructor-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .instructor-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      text-align: center;
+      border-top: 4px solid #14b8a6;
+    }
+
+    .instructor-card h3 {
+      color: #0891b2;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    .instructor-card .role {
+      color: #0f766e;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1.1em;
+    }
+
+    .testimonials {
+      padding: 60px 20px;
+      background: white;
+    }
+
+    .testimonials h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #1f2937;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testimonial-card {
+      background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      border-left: 4px solid #14b8a6;
+    }
+
+    .testimonial-card .quote {
+      font-style: italic;
+      color: #374151;
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .testimonial-card .author {
+      font-weight: 600;
+      color: #0f766e;
+      margin-bottom: 5px;
+    }
+
+    .testimonial-card .role-text {
+      color: #6b7280;
+      font-size: 0.9em;
+    }
+
+    .faq {
+      background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+      padding: 60px 20px;
+    }
+
+    .faq h2 {
+      font-size: 2.5em;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #0c4a6e;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: white;
+      padding: 25px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .faq-item h3 {
+      color: #0891b2;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    .faq-item p {
+      color: #374151;
+    }
+
+    .final-cta {
+      background: linear-gradient(135deg, #0891b2 0%, #14b8a6 100%);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+    }
+
+    .final-cta p {
+      font-size: 1.3em;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .final-cta .cta {
+      background: #fbbf24;
+      color: #1f2937;
+      padding: 20px 50px;
+      font-size: 1.3em;
+      font-weight: 700;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .final-cta .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+
+    .guarantee {
+      background: #ecfdf5;
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 800px;
+      margin: 40px auto;
+      border: 2px solid #10b981;
+    }
+
+    .guarantee h3 {
+      color: #047857;
+      text-align: center;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2em;
+      }
+      .hero .subtitle {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+<section class="hero">
+  <h1>From Inbox to Impact</h1>
+  <p class="subtitle">Cut the Clutter. Craft Your Voice. Communicate Like a Pro.</p>
+
+  <div class="workshop-details">
+    <p>📅 December 9th, 2025 | ⏰ 9:00 AM - 12:00 PM</p>
+    <p>📍 Moonshot Campus, 2225 N Gemini Dr, Flagstaff, AZ</p>
+  </div>
+
+  <p style="font-size: 1.2em; margin: 20px 0;">A hands-on, 3-hour intensive workshop with expert guidance every step of the way</p>
+  <a href="#register" class="cta">Save Your Spot Now</a>
+</section>
+
+<section class="pain-points">
+  <h2>Does This Sound Familiar?</h2>
+  <div class="pain-grid">
+    <div class="pain-item">
+      <h3>Drowning in Emails</h3>
+      <p>Every morning starts with a packed inbox. Every evening ends with unfinished responses. The cycle never stops.</p>
+    </div>
+    <div class="pain-item">
+      <h3>AI That Sounds Like a Robot</h3>
+      <p>You've tried ChatGPT, but the results feel generic, stiff, and nothing like how you actually communicate.</p>
+    </div>
+    <div class="pain-item">
+      <h3>Starting From Scratch, Again and Again</h3>
+      <p>You re-explain your context, style, and preferences to AI every single time. It's exhausting and wastes precious minutes.</p>
+    </div>
+    <div class="pain-item">
+      <h3>Professional but Forgettable</h3>
+      <p>Your writing gets the job done, but it doesn't stand out. You want to sound like YOU, not like everyone else.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hands-on">
+  <h2>You Won't Be Doing This Alone</h2>
+  <div class="hands-on-content">
+    <p style="font-size: 1.2em; color: #0c4a6e; margin-bottom: 30px;">This isn't a lecture where you take notes and figure it out later. Throughout the entire workshop, you'll have <strong>two experienced trainers</strong> guiding you through every exercise, answering your questions, and providing personalized feedback.</p>
+
+    <div class="hands-on-grid">
+      <div class="hands-on-item">
+        <h3>Live Demonstrations</h3>
+        <p>Watch experts show you exactly how to build each component of your AI writing system in real-time.</p>
       </div>
-    </footer>
-  </body>
+      <div class="hands-on-item">
+        <h3>Hands-On Exercises</h3>
+        <p>Create your brand voice, custom instructions, and workflows while trainers help you through each step.</p>
+      </div>
+      <div class="hands-on-item">
+        <h3>Group Discussion & Coaching</h3>
+        <p>Share your work, get personalized feedback, and learn from other professionals facing similar challenges.</p>
+      </div>
+      <!-- <div class="hands-on-item">
+          <h3>Unlimited Q&A</h3>
+          <p>Ask questions anytime. No question is too basic or too advanced—we're here to help you succeed.</p>
+      </div> -->
+    </div>
+
+    <p style="font-size: 1.1em; color: #0c4a6e; margin-top: 30px; font-weight: 500;">You'll leave with working systems, not just theory—because you'll build them with expert support right there in the room.</p>
+  </div>
+</section>
+
+<section class="solution">
+  <div class="container">
+    <h2>What You'll Accomplish in 3 Hours</h2>
+    <div class="benefits">
+      <div class="benefit-card">
+        <div class="number">1</div>
+        <h3>Discover Your Authentic Voice</h3>
+        <p>Through guided exercises and personalized coaching, you'll define exactly what makes your communication distinctive and create clear guidelines for maintaining consistency across every platform.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="number">2</div>
+        <h3>Build Your Personal AI Assistant</h3>
+        <p>With step-by-step instruction from our trainers, you'll create a customized AI system that remembers your style, understands your preferences, and generates drafts that actually sound like you wrote them.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="number">3</div>
+        <h3>Reclaim Hours Every Week</h3>
+        <p>Walk away with ready-to-use workflows for emails, reports, proposals, and content creation that you can implement immediately—no more starting from scratch or wasting time on repetitive tasks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="what-you-get">
+  <h2>What You'll Walk Away With</h2>
+  <div class="deliverables">
+    <div class="deliverable">
+      <h3>Your Brand Voice Blueprint</h3>
+      <p>A clear, written guide defining your authentic communication style with specific do's and don'ts you can reference forever. Built during our live exercises with trainer feedback.</p>
+    </div>
+    <div class="deliverable">
+      <h3>Custom AI Instructions</h3>
+      <p>A fully configured AI profile that remembers your role, industry, audience, tone preferences, and writing boundaries across every conversation. Created with hands-on guidance.</p>
+    </div>
+    <div class="deliverable">
+      <h3>Ready-to-Use Workflow Templates</h3>
+      <p>Practical frameworks for emails, reports, proposals, content creation, and client communications that you can implement immediately—tested and refined during the workshop.</p>
+    </div>
+    <div class="deliverable">
+      <h3>Personalized Coaching & Support</h3>
+      <p>Direct feedback from our expert instructors throughout the workshop to refine your approach and troubleshoot your specific communication challenges as they arise.</p>
+    </div>
+  </div>
+</section>
+
+<section class="instructors">
+  <h2>Meet Your Guides</h2>
+  <div class="instructor-grid">
+    <div class="instructor-card">
+      <h3>Ariel Strong</h3>
+      <p class="role">AI Coach & Developer</p>
+      <p>Ariel helps professionals automate repetitive tasks and build intelligent systems that enhance human creativity and productivity. As an expert in custom AI implementations, Ariel focuses on creating human-friendly workflows that reduce mental workload while maintaining quality and consistency. Ariel will guide you through building your custom AI assistant step-by-step.</p>
+    </div>
+    <div class="instructor-card">
+      <h3>Katherine O'Donnell</h3>
+      <p class="role">Branding & Communications Expert</p>
+      <p>Katherine specializes in helping individuals and businesses discover their authentic brand and communication style. Her approach blends personal identity with professional presence, ensuring your message resonates with genuine impact across every interaction. Katherine will help you craft and refine your unique brand voice.</p>
+    </div>
+  </div>
+</section>
+<!--
+    <section class="testimonials">
+        <h2>What Past Attendees Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <p class="quote">"[Testimonial placeholder - participant feedback about time saved, confidence gained, or specific breakthrough moments from the workshop]"</p>
+                <p class="author">Name</p>
+                <p class="role-text">Title, Company/Industry</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"[Testimonial placeholder - participant feedback about the hands-on support, trainer expertise, or how the workshop exceeded expectations]"</p>
+                <p class="author">Name</p>
+                <p class="role-text">Title, Company/Industry</p>
+            </div>
+            <div class="testimonial-card">
+                <p class="quote">"[Testimonial placeholder - participant feedback about immediate results, ease of implementation, or impact on daily work]"</p>
+                <p class="author">Name</p>
+                <p class="role-text">Title, Company/Industry</p>
+            </div>
+        </div>
+    </section>
+-->
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-container">
+    <div class="faq-item">
+      <h3>Do I need to be tech-savvy to attend this workshop?</h3>
+      <p>Not at all! This workshop is designed for professionals at all skill levels. Our trainers will guide you through every step, and you'll have plenty of support to build your AI system regardless of your technical background. If you can use email and basic software, you can succeed in this workshop.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What should I bring to the workshop?</h3>
+      <p>Bring your laptop with internet access and a free ChatGPT account (we'll show you how to set one up if you don't have one yet). We recommend also bringing 2-3 examples of your recent writing (emails, reports, etc.) to use during the brand voice exercises.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Will I really have working tools by the end?</h3>
+      <p>Yes! This is a hands-on workshop where you'll actually build your brand voice blueprint and custom AI instructions during the session. Our trainers will work with you directly to ensure everything is set up and working before you leave.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What if I get stuck or have questions?</h3>
+      <p>That's exactly what we're here for! With two trainers in the room, you'll have constant access to help. You can ask questions at any time, and we'll provide personalized support throughout every exercise. No one leaves confused or stuck.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Is this workshop only about email?</h3>
+      <p>No—while we use email as a primary example, the workflows and systems you'll build apply to all your professional writing: reports, proposals, content creation, client communications, social media, and more. You'll leave with a complete communication system.</p>
+    </div>
+    <div class="faq-item">
+      <h3>How many people will be in the workshop?</h3>
+      <p>We deliberately keep class sizes small to ensure everyone receives personalized attention and coaching from our trainers. This intimate setting allows for meaningful group discussions and plenty of one-on-one support.</p>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta">
+  <h2>Transform How You Communicate</h2>
+  <p>In just 3 hours, you'll build a complete system that saves time, maintains authenticity,<br> and elevates every message you send—with expert guidance every step of the way.</p>
+
+  <div class="guarantee">
+    <h3>Our Promise to You</h3>
+    <p style="color: #047857; text-align: center;">By the end of this workshop, you'll have working tools and a clear roadmap to communicate more effectively while reclaiming valuable time. If you don't walk away with practical systems you can use immediately, we haven't done our job.</p>
+  </div>
+
+  <a href="#register" class="cta" id="register">Register for the Workshop</a>
+  <p style="margin-top: 30px; font-size: 1.1em;">📅 December 9th | ⏰ 9:00 AM - 12:00 PM | 📍 Moonshot Campus, Flagstaff</p>
+  <p style="font-size: 1.1em;">Limited spots available to ensure personalized attention from our trainers</p>
+</section>
+
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+  });
+</script>
+</body>
 </html>
