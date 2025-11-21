@@ -61,11 +61,11 @@ body {
   overflow-x: hidden;
 }
 
-/*
-.container {
-
+.container.header {
+  Margin-top: 8rem;
 }
 
+/*
 section {
 
 }
@@ -294,13 +294,19 @@ nav a.wildfire:hover {
   color: var(--primary-orange);
 }
 
-#about {
+/* Banner */
+#banner {
+  position: fixed;
+  top: 67px;
+  left: 0;
+  z-index: 999;
+  background-color: #f76d1d;
+  width: 100%;
   padding: 0;
 }
 
-/* Grand Opening Banner */
-#banner {
-  position: relative;
+#banner.home {
+  position: fixed;
   top: 67px;
   left: 0;
   z-index: 999;
@@ -338,7 +344,6 @@ nav a.wildfire:hover {
 #banner a.event:hover {
   color: floralwhite;
 }
-
 
 #banner-mid {
   top: 0;
@@ -416,7 +421,7 @@ a.btn-wildfire:hover {
 }
 
 .hero {
-  padding-top: 70px;
+  padding-top: 120px;
   padding-bottom: 40px;
   background: linear-gradient(135deg, rgba(255, 126, 0, 0.1) 0%, rgba(0, 180, 216, 0.1) 100%);
   position: relative;
@@ -645,6 +650,7 @@ a.btn-wildfire:hover {
 
 #about {
   margin: 0 0 4rem 0;
+  padding: 20rem 0 0 0;
   background-color: var(--light-bg);
 }
 
