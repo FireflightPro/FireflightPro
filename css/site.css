@@ -56,13 +56,14 @@
 }
 
 body {
-  line-height: 1.6;
+  background-color: #f8f8f8;
   color: var(--dark-text);
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
 .container.header {
-  Margin-top: 8rem;
+  margin-top: 8rem;
 }
 
 /*

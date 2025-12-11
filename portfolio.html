@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ariel Strong | Portfolio</title>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      background: #0395da;
+      padding: 4rem 0 1.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    .no-banner {
+      margin-top: 2rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    h2 {
+      color: #02224e;
+      border-bottom: 2px solid #1e5a8e;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    }
+
+    /* h2 {
+      color: #003366;
+      border-bottom: 2px solid #ff6600;
+      padding-bottom: 10px;
+      margin-top: 40px;
+    } */
+
+    .tagline {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+    }
+
+    .sections {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 40px 0;
+    }
+
+    .section {
+      flex: 1 1 300px;
+      margin: 15px;
+      padding: 25px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h3 {
+      color: #0094CC;
+      margin-top: 0;
+    }
+/*
+    .benefits {
+      background-color: #02224e;
+      color: white;
+      padding: 50px 0;
+    }
+
+    .benefits h2 {
+      color: white;
+      border-bottom: 2px solid white;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .benefit-item {
+      background-color: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    .benefit-item h4 {
+      color: #47c6fb;
+      margin-top: 0;
+    }
+ */
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 40px 0;
+    }
+
+    .service-card {
+      background-color: white;
+      border-radius: 5px;
+      padding: 25px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .service-card h3 {
+      color: #0094CC;
+      margin-top: 0;
+    }
+
+    .about {
+      padding: 50px 0;
+    }
+
+    .story {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .story-text {
+      flex: 2 1 500px;
+      padding-right: 30px;
+    }
+
+    .story-image {
+      flex: 1 1 300px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .cta {
+      background-color: #003366;
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: white;
+      text-align: center;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 30px;
+      font-weight: bold;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #0094CC;
+      color: white;
+      transform: scale(1.05);
+    }
+
+    /* Footer Styles */
+    #footer {
+      background-color: #02224e;
+      color: floralwhite;
+      padding: 3rem;
+    }
+
+    .footer-container {
+      /* display: grid;
+      grid-template-columns: 1fr;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center; */
+    }
+
+    .footer-about {
+      /* display: flex;
+      align-items: start; */
+      margin-bottom: 2rem;
+      width: 380px;
+    }
+
+    .footer-logo {
+      margin-bottom: 2rem;
+    }
+
+    .footer-logo img {
+      height: 180px;
+      margin-right: 10px;
+    }
+
+    .footer-contact {
+      /*display: flex; */
+      text-align: left;
+    }
+
+    .footer-contact h3 {
+      color: #0094CC;
+      font-size: 1.3rem;
+    }
+
+    .footer-contact li {
+      list-style: none;
+      text-decoration: none;
+    }
+    .footer-contact a {
+      text-decoration: none;
+      color: floralwhite;
+      margin-bottom: 1rem;
+    }
+
+    .footer-contact a:hover {
+      color: #0094CC;
+    }
+
+    .copyright {
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .copyright a {
+      color: floralwhite;
+    }
+
+    .copyright a:hover {
+      color: #0094CC;
+    }
+
+    .center {
+      display: block;
+      margin: 30px auto;
+      width: 90%;
+    }
+
+    a .button .services {
+      display: block;
+      margin: 10px auto;
+      width: 50%;
+    }
+
+    p.spacer {
+      display: block;
+      margin-top: 16px;
+      margin-bottom: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <header class="no-banner">
+  <!-- Navbar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="ai.html" class="ai">AI</a></li>
+        <!-- <li class="nav-divider"></li> -->
+        <li><a href="wildfire.html" class="wildfire">Wildfire</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Contact</a></li>
+      </ul>
+    </nav>
+    <div>
+    <h1>Ariel Strong Portfolio</h1>
+    <p class="tagline">Web Design & Development</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div>
+      <h2>To Realize the True Promise of Technology</h2>
+
+      <p class="spacer"><strong><i>I believe the benefits of technology are not just for giant corporations. They are for everyone.</i></strong></p>
+
+      <p>My goal is to empower people bring their ideas to life through the use of web technologies. I have seen how we can use our innate creativity and the power community to solve tough problems and do great things.</p>
+
+      <p>And while the idea is simple, it is not easy. To come in from the outside and truly understand the problem that those who know it best are trying to solve, I need to listen deeply and ask a lot of questions. Only then can I understand how to supply the technical expertise and training the people involved need to succeed.</p>
+
+      <p class="spacer">Here are some examples:</p>
+    </div>
+ <!--  </div>
+
+  <div class="container"> -->
+    <div class="services">
+      <div class="service-card">
+        <h3>Look Behind the Scenes</h3>
+        <p>A noted expert's research in animal behavior could revolutionize how we interact with animals.</p>
+        <p>Volunteers built a site that looked great, but...</p>
+        <a href="zoolingua.html" class="btn services">See a Current Migration</a>
+      </div>
+
+      <div class="service-card">
+        <h3>37 Years of Change</h3>
+        <p>We've been so busy living the transformation, we forget how much the internet has changed the world.</p>
+        <p>Find out how one small business grew its reach...</p>
+        <a href="study.html" class="btn services">Read a Case Study</a>
+      </div>
+
+      <div class="service-card">
+        <h3>See the Transformation</h3>
+        <p>When Don wanted to move his self-built site from Wix to Squarespace, we met and came up with a plan.</p>
+        <p>Take a look at the before and after...</p>
+
+        <a href="flaghypno.html" class="btn services">See the Redesign</a>
+      </div>
+    </div>
+  </div>
+<!-- Footer -->
+<footer id="footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <div class="footer-about">
+        <div class="footer-logo">
+          <img src="images/lioness-blue-circle-wbg.png" alt="FireFlight Logo"><br />
+          <p class="footer-about">FireFlight provides dual expertise in wildfire prevention and AI business solutions, helping protect what matters most while driving innovation.</p>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <ul>
+          <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Email</a></li>
+          <li><a href="PSTOS.html">Privacy & TOS</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="copyright">
+      <p>&copy; 2025 FireFlight. All rights reserved.</p>
+      <p>Website by <a href="https://fireflight.ai" class="sponsor">FireFlight</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

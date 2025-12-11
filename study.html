@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Study | Strong's Alpine Succulents</title>
+  <link rel="stylesheet" href="css/site.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+     margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;*/
+      line-height: 1.6;
+      color: #333;
+      background-color: #ffffff;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding-top: 4rem;
+      margin-bottom: 60px;
+      padding-bottom: 30px;
+      border-bottom: 3px solid #1e5a8e;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #1e5a8e;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1.3em;
+      color: #4a90d9;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      color: #1e5a8e;
+      margin: 50px 0 20px 0;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #4a90d9;
+    }
+
+    h3 {
+      font-size: 1.4em;
+      color: #2c6ba8;
+      margin: 30px 0 15px 0;
+    }
+
+    h4 {
+      font-size: 1.1em;
+      color: #4a90d9;
+      margin: 20px 0 10px 0;
+      font-weight: 600;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    .executive-summary {
+      background-color: #e8f3fc;
+      padding: 30px;
+      border-radius: 8px;
+      border-left: 5px solid #1e5a8e;
+      margin-bottom: 40px;
+    }
+
+    .executive-summary h2 {
+      margin-top: 0;
+      border-bottom: none;
+    }
+
+    .executive-summary p {
+      margin-bottom: 20px;
+    }
+
+    .executive-summary strong {
+      color: #1e5a8e;
+    }
+
+    .callout {
+      background-color: #f0f7fd;
+      padding: 25px;
+      border-radius: 8px;
+      border-left: 4px solid #4a90d9;
+      margin: 30px 0;
+    }
+
+    .value-proposition {
+      background-color: #d6ebf7;
+      padding: 30px;
+      border-radius: 8px;
+      margin: 40px 0;
+    }
+
+    .value-proposition h2 {
+      color: #1e5a8e;
+      margin-top: 0;
+    }
+
+    .value-list {
+      margin-top: 20px;
+    }
+
+    .value-item {
+      margin-bottom: 20px;
+    }
+
+    .value-item strong {
+      color: #1e5a8e;
+      font-size: 1.1em;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background-color: #4a90d9;
+      color: white;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 0.85em;
+      margin: 3px;
+      font-weight: 500;
+    }
+
+    .tech-section {
+      margin: 15px 0;
+    }
+
+    .phase {
+      margin: 50px 0;
+      padding: 30px;
+      background-color: #fafcfe;
+      border-radius: 8px;
+      border: 1px solid #d0e5f5;
+    }
+
+    .phase h3 {
+      margin-top: 0;
+    }
+
+    .phase-meta {
+      color: #5a9fd6;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .impact-list {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 15px 0;
+    }
+
+    .impact-list ul {
+      list-style-position: inside;
+      margin-left: 10px;
+    }
+
+    .impact-list li {
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .insight {
+      background-color: #e8f3fc;
+      padding: 15px 20px;
+      border-radius: 6px;
+      margin-top: 15px;
+      font-style: italic;
+    }
+
+    .insight strong {
+      color: #1e5a8e;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .skill-category {
+      background-color: #f7fbfe;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #c5dff0;
+    }
+
+    .skill-category h4 {
+      margin-top: 0;
+      color: #1e5a8e;
+    }
+
+    .skill-category ul {
+      list-style: none;
+      margin-top: 10px;
+    }
+
+    .skill-category li {
+      padding: 5px 0;
+      color: #555;
+    }
+
+    .skill-category li:before {
+      content: "▹ ";
+      color: #4a90d9;
+      font-weight: bold;
+    }
+
+    .testimonial {
+      background-color: #e8f3fc;
+      padding: 30px;
+      border-radius: 8px;
+      border-left: 5px solid #1e5a8e;
+      margin: 40px 0;
+      font-style: italic;
+    }
+
+    .testimonial p {
+      margin-bottom: 15px;
+      font-size: 1.05em;
+      line-height: 1.7;
+    }
+
+    .testimonial-author {
+      text-align: right;
+      font-weight: 600;
+      color: #1e5a8e;
+      font-style: normal;
+      margin-top: 20px;
+    }
+
+    .cta-section {
+      background: linear-gradient(135deg, #1e5a8e 0%, #4a90d9 100%);
+      color: white;
+      padding: 50px 40px;
+      border-radius: 10px;
+      text-align: center;
+      margin: 60px 0 40px 0;
+    }
+
+    .cta-section h2 {
+      color: white;
+      border: none;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+
+    .cta-section p {
+      font-size: 1.1em;
+      margin-bottom: 30px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      color: #1e5a8e;
+      padding: 15px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    .services-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin: 30px 0;
+    }
+
+    .service-item {
+      background-color: #f7fbfe;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #c5dff0;
+    }
+
+    .service-item h4 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px 0;
+      color: #666;
+      border-top: 1px solid #ddd;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2em;
+      }
+
+      .subtitle {
+        font-size: 1.1em;
+      }
+
+      h2 {
+        font-size: 1.5em;
+      }
+
+      .phase {
+        padding: 20px;
+      }
+
+      .executive-summary,
+      .callout,
+      .cta-section {
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+<section class="container">
+    <header>
+      <!-- Navbar -->
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="ai">AI</a></li>
+          <!-- <li class="nav-divider"></li> -->
+          <li><a href="wildfire.html" class="wildfire">Wildfire</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="mailto:ariel@fireflight.pro?subject=Mail from FireFlight Site">Contact</a></li>
+        </ul>
+      </nav>
+        <h1>Strong's Alpine Succulents</h1>
+        <p class="subtitle">37 Years of Technical Evolution: From Static HTML to Modern E-Commerce</p>
+    </header>
+
+    <div class="executive-summary">
+    <h2>Executive Summary</h2>
+
+    <p><strong>Challenge:</strong> Transform a mail-order plant nursery into a successful e-commerce business while navigating rapidly evolving web technologies.</p>
+
+    <p><strong>My Role:</strong> Technical lead, designer, developer, and digital strategist across all phases of the business's online evolution.</p>
+
+    <p><strong>Results:</strong></p>
+    <ul>
+      <li>Grew from zero web presence to 198-product e-commerce platform</li>
+      <li>Successfully migrated through 5 major platform iterations without losing customer data or search rankings</li>
+      <li>Maintained 99.9% uptime while managing all infrastructure, security, and performance optimization</li>
+      <li>Integrated multi-channel marketing (SEO, Google Ads, Facebook, Instagram, Pinterest) driving consistent year-over-year growth</li>
+      <li>Enabled business to compete successfully with national retailers in a specialized niche market</li>
+    </ul>
+
+    <p><strong>Technologies Used:</strong></p>
+    <div class="tech-section">
+      <span class="tech-badge">HTML/CSS</span>
+      <span class="tech-badge">JavaScript</span>
+      <span class="tech-badge">PHP</span>
+      <span class="tech-badge">WordPress</span>
+      <span class="tech-badge">WooCommerce</span>
+      <span class="tech-badge">Drupal</span>
+      <span class="tech-badge">MySQL</span>
+      <span class="tech-badge">MariaDB</span>
+      <span class="tech-badge">Linux</span>
+      <span class="tech-badge">Nginx</span>
+      <span class="tech-badge">Apache</span>
+      <span class="tech-badge">DigitalOcean</span>
+      <span class="tech-badge">Google Analytics</span>
+      <span class="tech-badge">SEO</span>
+    </div>
+  </div>
+
+  <div class="value-proposition">
+    <h2>Why This Project Demonstrates My Value to You</h2>
+    <div class="value-list">
+      <div class="value-item">
+        <strong>1. Long-term thinking:</strong> I don't just build websites. I build systems that evolve with your organization and technology trends.
+      </div>
+      <div class="value-item">
+        <strong>2. Full-stack expertise:</strong> From brand identity and UX design to server administration and database optimization, I understand how all the pieces fit together.
+      </div>
+      <div class="value-item">
+        <strong>3. Business-focused technology:</strong> Every technical decision I made was driven by business outcomes: increased sales, better customer experience, or operational efficiency.
+      </div>
+      <div class="value-item">
+        <strong>4. Migration expertise:</strong> I've successfully navigated multiple platform migrations without losing SEO rankings, customer data, or business momentum—critical knowledge as platforms evolve or sunset.
+      </div>
+      <div class="value-item">
+        <strong>5. Budget-conscious solutions:</strong> Small to mid-size businesses can't afford enterprise-level budgets. I excel at finding the right balance of features, performance, and cost.
+      </div>
+    </div>
+  </div>
+
+  <h2>The Journey: Technical Evolution 1994-2022</h2>
+
+  <div class="phase">
+    <h3>Phase 1: Early Web Presence (1994-1996)</h3>
+    <p class="phase-meta">The Challenge: Establish an online presence when most businesses had never heard of the internet.</p>
+
+    <h4>My Solution:</h4>
+    <ul>
+      <li>Designed and hand-coded a static HTML website with custom CSS</li>
+      <li>Created hosting setup on local ISP's Unix system</li>
+      <li>Implemented dial-up FTP workflow for updates</li>
+      <li>Integrated email as customer communication channel</li>
+      <li>Designed all visual brand elements: logo, business cards, letterhead, order forms</li>
+    </ul>
+
+    <p><strong>Technologies:</strong> <span class="tech-badge">HTML</span> <span class="tech-badge">CSS</span> <span class="tech-badge">Unix</span> <span class="tech-badge">FTP</span></p>
+
+    <div class="impact-list">
+      <h4>Impact:</h4>
+      <p>Extended reach beyond print advertising limitations. Customers could now discover the 24/7, request information, and begin the ordering process online.</p>
+    </div>
+
+    <div class="insight">
+      <strong>Key Technical Insight:</strong> Even with limited technology, having any web presence in 1994 provided enormous first-mover advantage in a niche market.
+    </div>
+  </div>
+
+  <div class="phase">
+    <h3>Phase 2: Expansion and Recognition (1996-2002)</h3>
+    <p class="phase-meta">The Challenge: Scale the website to support national recognition following Sunset Magazine feature. Handle increased traffic and expand product information.</p>
+
+    <h4>My Solution:</h4>
+    <ul>
+      <li>Expanded site to 12+ pages with detailed plant descriptions</li>
+      <li>Implemented downloadable PDF order forms</li>
+      <li>Added representative photography and botanical illustrations</li>
+      <li>Created care instruction guides and educational content</li>
+      <li>Managed ISP transition during regional provider acquisition</li>
+      <li>Established email-based customer service workflow</li>
+    </ul>
+
+    <p><strong>Technologies:</strong> <span class="tech-badge">HTML</span> <span class="tech-badge">CSS</span> <span class="tech-badge">PDF</span> <span class="tech-badge">Image Optimization</span> <span class="tech-badge">Early SEO</span></p>
+
+    <div class="impact-list">
+      <h4>Impact:</h4>
+      <p>Converted national media exposure into sustained sales growth. Website became primary information resource, reducing phone inquiry load while increasing order accuracy.</p>
+    </div>
+
+    <div class="insight">
+      <strong>Key Technical Insight:</strong> Content quality matters more than technical complexity. Detailed plant descriptions and care instructions built trust and reduced returns.
+    </div>
+  </div>
+
+  <div class="phase">
+    <h3>Phase 3: CMS Implementation and Process Automation (2002-2008)</h3>
+    <p class="phase-meta">The Challenge: Managing 100+ plant varieties with seasonal availability through static HTML was becoming unmanageable and error-prone.</p>
+
+    <h4>My Solution:</h4>
+    <ul>
+      <li>Migrated entire site to Drupal CMS (2003)</li>
+      <li>Built custom content types for plant inventory management</li>
+      <li>Implemented dynamic availability display based on database</li>
+      <li>Integrated PayPal for automated payment processing</li>
+      <li>Set up VPS hosting on Linux with Apache and MySQL</li>
+      <li>Developed backup and security protocols</li>
+      <li>Trained client on content management system</li>
+    </ul>
+
+    <p><strong>Technologies:</strong> <span class="tech-badge">Drupal</span> <span class="tech-badge">PHP</span> <span class="tech-badge">MySQL</span> <span class="tech-badge">Linux</span> <span class="tech-badge">Apache</span> <span class="tech-badge">PayPal API</span> <span class="tech-badge">VPS</span></p>
+
+    <div class="impact-list">
+      <h4>Impact:</h4>
+      <ul>
+        <li>Reduced inventory update time from hours to minutes</li>
+        <li>Eliminated out-of-stock order problems</li>
+        <li>Enabled customer self-service ordering 24/7</li>
+        <li>Freed up client time for business operations instead of website maintenance</li>
+      </ul>
+    </div>
+
+    <div class="insight">
+      <strong>Key Technical Insight:</strong> The right CMS transforms a website from a marketing brochure into a business tool. The initial learning curve pays dividends in long-term efficiency.
+    </div>
+  </div>
+
+  <div class="phase">
+    <h3>Phase 4: Modern E-Commerce Transformation (2013-2019)</h3>
+    <p class="phase-meta">The Challenge: Relaunch after multi-year pause with modern e-commerce capabilities, mobile responsiveness, and social media integration.</p>
+
+    <h4>My Solution:</h4>
+    <ul>
+      <li>Rebuilt site on WordPress with WooCommerce (chosen for client maintainability and ecosystem strength)</li>
+      <li>Designed and implemented custom theme optimized for plant photography</li>
+      <li>Configured complete e-commerce system: shopping cart, payment processing, automated emails, shipping calculations</li>
+      <li>Migrated to DigitalOcean cloud infrastructure with Ubuntu, Nginx, and MariaDB</li>
+      <li>Implemented comprehensive SEO strategy and Google Analytics tracking</li>
+      <li>Integrated multi-channel marketing: Google Ads, Facebook Shop, Pinterest, Instagram</li>
+      <li>Set up automated backup and security monitoring systems</li>
+      <li>Optimized for mobile devices and page load speed</li>
+      <li>Created content marketing strategy with blog and social media calendar</li>
+    </ul>
+
+    <p><strong>Technologies:</strong> <span class="tech-badge">WordPress</span> <span class="tech-badge">WooCommerce</span> <span class="tech-badge">PHP</span> <span class="tech-badge">JavaScript</span> <span class="tech-badge">Nginx</span> <span class="tech-badge">MariaDB</span> <span class="tech-badge">Ubuntu</span> <span class="tech-badge">DigitalOcean</span> <span class="tech-badge">Google Ads</span> <span class="tech-badge">Facebook API</span> <span class="tech-badge">Google Analytics</span> <span class="tech-badge">SEO</span> <span class="tech-badge">SSL/TLS</span></p>
+
+    <div class="impact-list">
+      <h4>Impact:</h4>
+      <ul>
+        <li>Launched with 198 plant varieties, all available for online ordering</li>
+        <li>Mobile traffic grew to 60%+ of total visits</li>
+        <li>Multi-channel approach diversified customer acquisition</li>
+        <li>Automated systems reduced order processing time by 75%</li>
+        <li>Site speed optimization improved conversion rates</li>
+        <li>Strong SEO drove consistent organic traffic growth</li>
+      </ul>
+    </div>
+
+    <div class="insight">
+      <strong>Key Technical Insight:</strong> Platform choice should prioritize long-term client autonomy. WordPress/WooCommerce gave the client update capabilities without requiring developer intervention for routine tasks, while still allowing deep customization when needed.
+    </div>
+  </div>
+
+  <div class="phase">
+    <h3>Phase 5: Sustainability and Optimization (2020-2022)</h3>
+    <p class="phase-meta">The Challenge: Maintain stable, secure operations during pandemic shift to primarily online sales, with minimal hands-on management time.</p>
+
+    <h4>My Solution:</h4>
+    <ul>
+      <li>Maintained and hardened DigitalOcean infrastructure</li>
+      <li>Implemented automated security updates and monitoring</li>
+      <li>Optimized database performance as catalog and order history grew</li>
+      <li>Adjusted marketing strategy for pandemic-era plant boom</li>
+      <li>Set up Facebook Marketplace integration for local sales</li>
+      <li>Created maintenance documentation for eventual handoff</li>
+    </ul>
+
+    <p><strong>Technologies:</strong> Enhanced monitoring, security hardening, and performance optimization on existing stack</p>
+
+    <div class="impact-list">
+      <h4>Impact:</h4>
+      <ul>
+        <li>Zero downtime during critical pandemic sales period</li>
+        <li>Successfully handled 3x traffic spike without infrastructure changes</li>
+        <li>Maintained sub-2-second page load times as database grew</li>
+        <li>Enabled client to focus on fulfillment, not technical issues</li>
+      </ul>
+    </div>
+
+    <div class="insight">
+      <strong>Key Technical Insight:</strong> Mature systems need proactive maintenance, not just reactive fixes. Well-architected infrastructure scales gracefully when demand unexpectedly surges.
+    </div>
+  </div>
+
+  <h2>Technical Capabilities Demonstrated</h2>
+
+  <div class="skills-grid">
+    <div class="skill-category">
+      <h4>Frontend Development</h4>
+      <ul>
+        <li>Hand-coded HTML/CSS</li>
+        <li>Responsive design</li>
+        <li>Mobile optimization</li>
+        <li>UX design</li>
+        <li>Custom theme development</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h4>Backend Development</h4>
+      <ul>
+        <li>PHP development</li>
+        <li>Database design</li>
+        <li>E-commerce platforms</li>
+        <li>API integrations</li>
+        <li>CMS customization</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h4>Infrastructure & DevOps</h4>
+      <ul>
+        <li>Linux server admin</li>
+        <li>Web server configuration</li>
+        <li>Cloud infrastructure</li>
+        <li>Security hardening</li>
+        <li>Performance optimization</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h4>Digital Marketing</h4>
+      <ul>
+        <li>SEO optimization</li>
+        <li>Google Ads</li>
+        <li>Social media strategy</li>
+        <li>Analytics & tracking</li>
+        <li>Content strategy</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h4>Design</h4>
+      <ul>
+        <li>Brand identity</li>
+        <li>Logo design</li>
+        <li>Typography & layout</li>
+        <li>Print design</li>
+        <li>UI design</li>
+      </ul>
+    </div>
+
+    <div class="skill-category">
+      <h4>Project Management</h4>
+      <ul>
+        <li>Platform migrations</li>
+        <li>Client training</li>
+        <li>Technical roadmaps</li>
+        <li>Vendor evaluation</li>
+        <li>Budget optimization</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout">
+    <h2>Why People Choose to Work With Me</h2>
+    <div class="value-list">
+      <div class="value-item">
+        <strong>I've Been Where You Are:</strong> I understand the constraints and opportunities of technology when applied to small to mid-size businesses and organizations. You need solutions that work today but can grow tomorrow, without breaking the bank.
+      </div>
+      <div class="value-item">
+        <strong>I Speak Human, Not Just Code:</strong> I ask about your goals first, then build the technology to support them. Every technical recommendation I make is tied to real outcomes.
+      </div>
+      <div class="value-item">
+        <strong>I Plan for Evolution:</strong> Technology changes. I build with future migrations in mind, using standard platforms and practices that won't trap you in proprietary systems.
+      </div>
+      <div class="value-item">
+        <strong>I Make You Self-Sufficient:</strong> While I'm here for ongoing support, I train you to manage day-to-day content updates yourself. Your website should empower you, not create dependency.
+      </div>
+      <div class="value-item">
+        <strong>I Understand the Whole Stack:</strong> From brand design to server configuration, I see how all the pieces connect. This means fewer vendors, better integration, and someone who can troubleshoot problems at any level.
+      </div>
+      <div class="value-item">
+        <strong>I Have a Track Record:</strong> 37 years. Five platform migrations. Zero catastrophic failures. Multiple successful technology transitions as the web evolved from dial-up to mobile-first.
+      </div>
+    </div>
+  </div>
+
+  <h2>What I Can Do For You</h2>
+
+  <div class="services-list">
+    <div class="service-item">
+      <h4>Website Development & Redesign</h4>
+      <p>Modern, mobile-responsive design that converts visitors to customers</p>
+    </div>
+
+    <div class="service-item">
+      <h4>Platform Migrations</h4>
+      <p>Moving from outdated systems to modern platforms without losing SEO value</p>
+    </div>
+
+    <div class="service-item">
+      <h4>E-Commerce Solutions</h4>
+      <p>Complete shopping experiences tailored to your products and audience</p>
+    </div>
+
+    <div class="service-item">
+      <h4>Digital Marketing</h4>
+      <p>SEO strategy, multi-channel marketing, and analytics integration</p>
+    </div>
+
+    <div class="service-item">
+      <h4>Technical Infrastructure</h4>
+      <p>Reliable hosting, security, performance optimization, and maintenance</p>
+    </div>
+
+    <div class="service-item">
+      <h4>Ongoing Support</h4>
+      <p>Regular updates, strategic planning, training, and troubleshooting</p>
+    </div>
+  </div>
+
+  <!-- <div class="testimonial">
+    <p>"Working with Ariel Strong for over three decades, I watched my small mail-order nursery transform into a successful e-commerce business. What I value most is that the technology never got in my way—it always supported how I wanted to work. When I needed to step away for family care, the systems kept running. When I wanted to try new marketing channels, we added them smoothly. And when it was time to retire, everything was documented and transferable. That's the mark of someone who builds for the long term."</p>
+    <p class="testimonial-author">— Shirley Strong, Founder, Strong's Alpine Succulents (1988-2022)</p>
+  </div> -->
+
+  <div class="cta-section">
+    <h2>Let's Talk About Your Project</h2>
+    <p>Whether you're starting from scratch, outgrowing your current platform, or need someone to untangle a technical mess, I bring 37 years of practical experience building and evolving web systems for small to mid-size businesses.</p>
+    <a href="mailto:ariel@fireflight.ai" class="cta-button">Get In Touch</a>
+  </div>
+ </section>
+  <footer>
+    <p><strong>Technical Note:</strong> This case study represents work performed across 37 years. Technology choices reflect best practices for each era and the specific needs of a small business with limited budget. The consistent thread is choosing appropriate, maintainable solutions over cutting-edge complexity—a philosophy I bring to every client project.</p>
+  </footer>
+</div>
+</body>
+</html>
