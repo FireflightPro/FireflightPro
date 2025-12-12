@@ -110,7 +110,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 30px;
-      margin: 40px 0;
+      margin: 20px 0;
     }
 
     .service-card {
@@ -126,10 +126,16 @@
     }
 
     .service-card h3 {
-      color: #0094CC;
+      color: #0395da;;
       margin-top: 0;
+      text-align: center;
     }
 
+    a.btn:hover {
+      background-color: #05abeb;
+      color: white;
+      transition: var(--transition);
+    }
     .about {
       padding: 50px 0;
     }
@@ -255,17 +261,43 @@
 
     .center {
       display: block;
-      margin: 30px auto;
-      width: 90%;
+      margin: 20px auto;
+      /* width: 90%; */
     }
 
-    a .button .services {
+   /*  .center h3 {
+      width: 100%;
+    } */
+
+    .btn .services a {
       display: block;
+      background-color: white;
+      color: #1e5a8e; /* #1e5a8e */
+      padding: 15px 40px;
+      margin: 0 auto;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: transform 0.2s, box-shadow 0.2s;
+      /* display: block;
       margin: 10px auto;
-      width: 50%;
+      width: 50%;*/
     }
 
-    p.spacer {
+    .cta-button {
+      display: inline-block;
+      background-color: white;
+      color: #1e5a8e;
+      padding: 15px 40px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    p .spacer {
       display: block;
       margin-top: 16px;
       margin-bottom: 20px;
@@ -309,21 +341,21 @@
   <div class="container"> -->
     <div class="services">
       <div class="service-card">
-        <h3>Look Behind the Scenes</h3>
+        <h3 class="center">Look Behind the Scenes</h3>
         <p>A noted expert's research in animal behavior could revolutionize how we interact with animals.</p>
         <p>Volunteers built a site that looked great, but...</p>
         <!-- <a href="zoolingua.html" class="btn services">See a Current Migration</a> -->
       </div>
 
       <div class="service-card">
-        <h3>37 Years of Change</h3>
+        <h3 class="center">30 Years of Change</h3>
         <p>We've been so busy living the transformation, we forget how much the internet has changed the world.</p>
         <p>Find out how one small business grew its reach...</p>
         <a href="study.html" class="btn services">Read a Case Study</a>
       </div>
 
       <div class="service-card">
-        <h3>See the Transformation</h3>
+        <h3 class="center">See the Transformation</h3>
         <p>When Don wanted to move his self-built site from Wix to Squarespace, we met and came up with a plan.</p>
         <p>Take a look at the before and after...</p>
 

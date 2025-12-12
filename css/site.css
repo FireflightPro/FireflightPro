@@ -255,6 +255,7 @@ nav ul {
   display: flex;
   justify-content: center; /* space-between */
   list-style-type: none;
+  margin-bottom: 0;
   /* gap: 2rem; */
 }
 
