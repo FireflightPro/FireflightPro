@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earthsight AI Consortium — Brand Retreat Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  :root {
+    --midnight: #0D1B2A;
+    --deep-sky: #1A2E45;
+    --starlight: #E8F4F8;
+    --pale-star: #C5DDE8;
+    --ponderosa: #2D5A1B;
+    --pine-light: #4A7C32;
+    --sandstone: #C4956A;
+    --sand-light: #E8C4A0;
+    --volcanic: #3D2B1F;
+    --obs-gold: #D4A843;
+    --obs-light: #F0C96A;
+    --white: #FDFCFA;
+    --text-dark: #1A1A1A;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--midnight);
+    background-image: radial-gradient(ellipse at 20% 50%, rgba(212,168,67,0.12) 0%, transparent 60%),
+                      radial-gradient(ellipse at 80% 20%, rgba(45,90,27,0.15) 0%, transparent 50%),
+                      radial-gradient(ellipse at 60% 80%, rgba(26,46,69,0.8) 0%, transparent 60%);
+    color: var(--starlight);
+    padding: 64px 48px 56px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .stars {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 25%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 15%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 55% 35%, rgba(212,168,67,0.9) 0%, transparent 100%),
+      radial-gradient(1px 1px at 75% 10%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 85% 45%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 90% 70%, rgba(255,255,255,0.8) 0%, transparent 100%),
+      radial-gradient(1px 1px at 45% 75%, rgba(212,168,67,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 65% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1.5px 1.5px at 30% 40%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 25%, rgba(255,255,255,0.7) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 90%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 85%, rgba(212,168,67,0.6) 0%, transparent 100%),
+      radial-gradient(2px 2px at 40% 30%, rgba(255,255,255,0.9) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .hero-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+    margin-bottom: 16px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .hero-sub {
+    font-size: 16px;
+    color: var(--pale-star);
+    font-weight: 300;
+    margin-bottom: 32px;
+    max-width: 560px;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .meta-label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+  }
+
+  .meta-value {
+    font-size: 14px;
+    color: var(--starlight);
+    font-weight: 400;
+  }
+
+  /* INSIGHT BOX */
+  .insight-section {
+    background: var(--deep-sky);
+    color: var(--starlight);
+    padding: 48px;
+    border-left: 4px solid var(--obs-gold);
+  }
+
+  .insight-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+    margin-bottom: 16px;
+  }
+
+  .insight-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .insight-section p {
+    color: var(--pale-star);
+    font-size: 15px;
+    max-width: 720px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+  }
+
+  .insight-section p:last-child { margin-bottom: 0; }
+
+  /* PALETTE PREVIEW */
+  .palette-row {
+    display: flex;
+    gap: 0;
+    margin-top: 28px;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .swatch {
+    flex: 1;
+    height: 56px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 6px 10px;
+  }
+
+  .swatch-name {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  /* MAIN CONTENT */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 48px;
+  }
+
+  .section-intro {
+    margin-bottom: 52px;
+  }
+
+  .section-intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--midnight);
+    margin-bottom: 10px;
+  }
+
+  .section-intro p {
+    color: #444;
+    font-size: 15px;
+    max-width: 640px;
+  }
+
+  /* ACTIVITY CARDS */
+  .activity {
+    margin-bottom: 48px;
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .activity-header {
+    padding: 24px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .activity-number {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .activity-meta { flex: 1; }
+
+  .activity-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: var(--midnight);
+    margin-bottom: 4px;
+  }
+
+  .activity-timing {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #888;
+  }
+
+  .activity-body {
+    padding: 0 28px 28px;
+  }
+
+  .activity-desc {
+    font-size: 14.5px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  .steps-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 12px;
+  }
+
+  .steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .steps li {
+    display: flex;
+    gap: 14px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  .step-num {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #666;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .facilitator-note {
+    margin-top: 20px;
+    padding: 14px 18px;
+    background: #FAFAFA;
+    border-left: 3px solid var(--obs-gold);
+    border-radius: 0 6px 6px 0;
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+  }
+
+  .facilitator-note strong {
+    font-style: normal;
+    color: #333;
+    font-weight: 600;
+  }
+
+  /* Colors for each activity */
+  .act-1 .activity-number { background: var(--midnight); }
+  .act-1 .activity-header { background: #F8F9FF; }
+
+  .act-2 .activity-number { background: var(--ponderosa); }
+  .act-2 .activity-header { background: #F5F8F3; }
+
+  .act-3 .activity-number { background: #8B4513; }
+  .act-3 .activity-header { background: #FBF8F5; }
+
+  .act-4 .activity-number { background: var(--deep-sky); }
+  .act-4 .activity-header { background: #F3F7FB; }
+
+  .act-5 .activity-number { background: #7B5EA7; }
+  .act-5 .activity-header { background: #F8F5FF; }
+
+  /* PROMPTS SECTION */
+  .prompts-section {
+    background: var(--midnight);
+    border-radius: 12px;
+    padding: 32px;
+    margin-top: 48px;
+  }
+
+  .prompts-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--obs-gold);
+    margin-bottom: 8px;
+  }
+
+  .prompts-section .sub {
+    font-size: 13px;
+    color: var(--pale-star);
+    margin-bottom: 24px;
+  }
+
+  .prompt-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 14px;
+  }
+
+  .prompt-card:last-child { margin-bottom: 0; }
+
+  .prompt-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+    margin-bottom: 8px;
+  }
+
+  .prompt-text {
+    font-family: 'Inter', monospace;
+    font-size: 13px;
+    color: var(--starlight);
+    line-height: 1.7;
+  }
+
+  /* PALETTE SECTION */
+  .palette-section {
+    margin-top: 52px;
+  }
+
+  .palette-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--midnight);
+    margin-bottom: 8px;
+  }
+
+  .palette-section .sub {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 28px;
+    max-width: 580px;
+  }
+
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+  }
+
+  .palette-card {
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .palette-chip {
+    height: 80px;
+  }
+
+  .palette-info {
+    padding: 12px 14px;
+    background: white;
+  }
+
+  .palette-info-name {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--midnight);
+    margin-bottom: 2px;
+  }
+
+  .palette-info-meaning {
+    font-size: 11px;
+    color: #777;
+    line-height: 1.5;
+  }
+
+  .palette-info-hex {
+    font-size: 11px;
+    color: #AAA;
+    margin-top: 4px;
+    font-family: monospace;
+  }
+
+  /* DIVIDER */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D0D0D0, transparent);
+    margin: 48px 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--midnight);
+    color: var(--pale-star);
+    text-align: center;
+    padding: 32px 48px;
+    font-size: 13px;
+  }
+
+  .footer strong {
+    color: var(--obs-gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 640px) {
+    .hero { padding: 40px 24px; }
+    .hero h1 { font-size: 30px; }
+    .insight-section { padding: 32px 24px; }
+    .main { padding: 40px 24px; }
+    .meta-row { gap: 20px; }
+    .palette-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media print {
+    .hero { background: var(--midnight) !important; -webkit-print-color-adjust: exact; }
+    .activity { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="stars"></div>
+  <div class="hero-label">Brand Retreat Facilitation Guide</div>
+  <h1>Earthsight AI Consortium</h1>
+  <p class="hero-sub">A half-day visual brainstorming session for finding your brand identity — grounded in Flagstaff, built for the future.</p>
+  <div class="meta-row">
+    <div class="meta-item">
+      <span class="meta-label">Date</span>
+      <span class="meta-value">April 21, 2026</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Location</span>
+      <span class="meta-value">Moonshot Accelerator, Flagstaff AZ</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Visual Activities</span>
+      <span class="meta-value">~2 hours</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Participants</span>
+      <span class="meta-value">4 Consortium Members</span>
+    </div>
+  </div>
+</div>
+
+<!-- KEY INSIGHT -->
+<div class="insight-section">
+  <div class="insight-label">⭐ Before You Begin — The Core Insight</div>
+  <h2>Your name is already a Flagstaff brand. You just haven't seen it yet.</h2>
+  <p>Flagstaff is one of the world's first International Dark Sky Cities. The entire community protects its sky from light pollution so residents can see the stars clearly. The Lowell Observatory — where Pluto was discovered — sits on a hill above downtown. Seeing clearly is Flagstaff's literal identity.</p>
+  <p><strong>"Earthsight"</strong> means seeing Earth clearly: from above, without distortion, with perspective. That's what you do for your community — you help people see AI without fear or hype clouding the picture. Stars, constellations, the observatory, clear dark sky, foresight. That's your visual territory. It's completely local, completely ownable, and nobody else has it.</p>
+  <p>Let this idea breathe through every activity below. The question isn't "what should our logo look like?" It's: <em>"How do we make people feel like they can finally see clearly?"</em></p>
+
+  <div class="palette-row">
+    <div class="swatch" style="background:#0D1B2A;">
+      <span class="swatch-name" style="color:rgba(255,255,255,0.6);font-size:9px;">Midnight Sky</span>
+    </div>
+    <div class="swatch" style="background:#1A2E45;">
+      <span class="swatch-name" style="color:rgba(255,255,255,0.6);font-size:9px;">Deep Sky</span>
+    </div>
+    <div class="swatch" style="background:#D4A843;">
+      <span class="swatch-name" style="color:rgba(0,0,0,0.7);font-size:9px;">Observatory Gold</span>
+    </div>
+    <div class="swatch" style="background:#C4956A;">
+      <span class="swatch-name" style="color:rgba(0,0,0,0.7);font-size:9px;">Sandstone</span>
+    </div>
+    <div class="swatch" style="background:#2D5A1B;">
+      <span class="swatch-name" style="color:rgba(255,255,255,0.7);font-size:9px;">Ponderosa</span>
+    </div>
+    <div class="swatch" style="background:#3D2B1F;">
+      <span class="swatch-name" style="color:rgba(255,255,255,0.6);font-size:9px;">Volcanic</span>
+    </div>
+    <div class="swatch" style="background:#E8F4F8;">
+      <span class="swatch-name" style="color:rgba(0,0,0,0.5);font-size:9px;">Starlight</span>
+    </div>
+  </div>
+</div>
+
+<!-- ACTIVITIES -->
+<div class="main">
+
+  <div class="section-intro">
+    <h2>The Brainstorming Activities</h2>
+    <p>Run these in order. Each one builds on the last. The goal isn't to finalize your brand today — it's to generate shared visual language that all four of you can point to and say "yes, that's us."</p>
+  </div>
+
+  <!-- PRE-WORK -->
+  <div class="activity act-1">
+    <div class="activity-header">
+      <div class="activity-number">✦</div>
+      <div class="activity-meta">
+        <div class="activity-title">Pre-Work (Before the Retreat)</div>
+        <div class="activity-timing">Individual — 10 min per person</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-desc">Each member answers this question in writing <em>before arriving</em>. Do not discuss your answers with each other first. Written answers are almost always more honest than spoken ones.</p>
+      <div class="steps-label">The Question</div>
+      <ul class="steps">
+        <li><div class="step-num">→</div><div>It is five years from now. Earthsight has succeeded beyond your early hopes. What does Flagstaff — or Northern Arizona — look like differently because of what your consortium did? Write for 10 minutes without stopping. Don't edit. Don't plan. Just write.</div></li>
+      </ul>
+      <div class="facilitator-note"><strong>Facilitator (Ariel):</strong> Collect the written answers before the session starts. Read them. Underline every word that appears in more than one person's answer. Those shared words are your through-line. Bring them to Activity 1.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 1 -->
+  <div class="activity act-1">
+    <div class="activity-header">
+      <div class="activity-number">1</div>
+      <div class="activity-meta">
+        <div class="activity-title">Name Excavation</div>
+        <div class="activity-timing">Group — 20 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-desc">Before you can make "Earthsight" visual, you need to know what the group hears when they say it. This activity gets everyone's word-images into the room and surfaces hidden agreement.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="step-num">1</div><div>Write <strong>EARTH</strong> on one side of a whiteboard, <strong>SIGHT</strong> on the other. Give everyone 5 minutes to silently write every image, feeling, or place that each word brings up — Post-its or whiteboard, one idea per note.</div></li>
+        <li><div class="step-num">2</div><div>Each person shares their words aloud in one fast round — no explanations yet, just the words. Someone captures them on the board.</div></li>
+        <li><div class="step-num">3</div><div>Circle the images where both columns could connect — the intersection of "earth" and "sight." In Flagstaff, look for: the Lowell Observatory, dark sky, stars visible through ponderosa pines, aerial/drone views of the landscape, the San Francisco Peaks from above. These intersections are your visual territory.</div></li>
+        <li><div class="step-num">4</div><div>Ask: which of these feels most like <em>us</em>? Vote with dots or just conversation. Narrow to 3–4 core images.</div></li>
+      </ul>
+      <div class="facilitator-note"><strong>Facilitator note:</strong> If "observatory," "dark sky," or "stars" come up — and they almost certainly will — pause and share the insight from the top of this guide. Let the group sit with it for a moment before moving on.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 2 -->
+  <div class="activity act-2">
+    <div class="activity-header">
+      <div class="activity-number">2</div>
+      <div class="activity-meta">
+        <div class="activity-title">Flagstaff Visual Vocabulary</div>
+        <div class="activity-timing">Group — 20 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-desc">Your brand needs to feel unmistakably local without slapping a Route 66 shield on it. This exercise finds the emotional visual language of the place — the things that make people feel Flagstaff before they're told it's Flagstaff.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="step-num">1</div><div>Each person takes 5 minutes to find 5 images on their phone or laptop that feel like Flagstaff to them — not tourist photos, but images that carry the <em>feeling</em> of the place. Share them on a screen or lay them out.</div></li>
+        <li><div class="step-num">2</div><div>As a group, look at all 20 images together. What patterns appear? What colors, textures, moods, and subjects keep showing up?</div></li>
+        <li><div class="step-num">3</div><div>Write down the top 5 recurring visual elements on the board. These become your brand's visual anchors — the images and feelings you're allowed to draw from.</div></li>
+        <li><div class="step-num">4</div><div>Have someone capture a photo of the full image spread — this becomes reference material for your designer or intern.</div></li>
+      </ul>
+      <div class="facilitator-note"><strong>What to listen for:</strong> In Flagstaff, people almost always gravitate toward dark sky/stars, volcanic landscape, ponderosa silhouettes, the mountain (Humphreys Peak), and the quality of light at high altitude — that clear, sharp, golden-hour quality. These point directly toward your palette. If "community, people, gathering" imagery comes up — great. That's the human layer of the brand.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 3 -->
+  <div class="activity act-3">
+    <div class="activity-header">
+      <div class="activity-number">3</div>
+      <div class="activity-meta">
+        <div class="activity-title">We Are / We Are Not</div>
+        <div class="activity-timing">Group — 15 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-desc">The fastest way to clarify what your brand looks like is to be ruthless about what it doesn't look like. Most AI brands are cold, corporate, abstract, and futurist. Define your negative space by naming what you're pushing against.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="step-num">1</div><div>Draw two columns: <strong>WE ARE</strong> and <strong>WE ARE NOT</strong>. Give everyone 3 minutes to silently generate words for both columns — about tone, feeling, visual style, and personality.</div></li>
+        <li><div class="step-num">2</div><div>Share and build the lists. Look for consensus — where does everyone agree without hesitation?</div></li>
+        <li><div class="step-num">3</div><div>From the "We Are" list, pick your three non-negotiable brand words. These go on the wall and govern all content and design decisions going forward.</div></li>
+      </ul>
+      <div class="facilitator-note"><strong>Seed words to consider (only use if the group gets stuck):</strong> We Are: grounded, warm, specific, local, trustworthy, curious, accessible, wise. We Are Not: hype, corporate, abstract, fear-based, jargon-heavy, cold, generic, coastal-tech-bro.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 4 -->
+  <div class="activity act-4">
+    <div class="activity-header">
+      <div class="activity-number">4</div>
+      <div class="activity-meta">
+        <div class="activity-title">The Color Story</div>
+        <div class="activity-timing">Group — 15 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-desc">Colors aren't decoration — they're meaning. Choosing your palette from Flagstaff's natural environment gives you colors that are distinctive, local, and emotionally resonant. The goal here isn't to finalize a hex code — it's to agree on the emotional range.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="step-num">1</div><div>Look at the color palette suggested in this guide (at the top and at the bottom of this page). Does it feel right? What's missing? What feels off?</div></li>
+        <li><div class="step-num">2</div><div>Pull up images from Activity 2 again. Sample the colors that appear most. Do they align with the suggested palette or suggest something different?</div></li>
+        <li><div class="step-num">3</div><div>Make one decision: Is the brand primarily <strong>dark</strong> (deep sky, observatory-at-night, stars on dark) or primarily <strong>light</strong> (high-desert daylight, open sky, warm sandstone)? Both directions work — but you need to pick a dominant direction.</div></li>
+        <li><div class="step-num">4</div><div>Name each color in your palette with a Flagstaff word, not a color word. "Sandstone" instead of "tan." "Observatory Gold" instead of "yellow." "Dark Sky" instead of "navy." This language becomes part of your brand voice.</div></li>
+      </ul>
+      <div class="facilitator-note"><strong>Why this matters:</strong> Color names that reference place and story are much harder for interns and collaborators to get wrong. "Observatory Gold" communicates something specific. "Yellow" does not.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 5 -->
+  <div class="activity act-5">
+    <div class="activity-header">
+      <div class="activity-number">5</div>
+      <div class="activity-meta">
+        <div class="activity-title">Live AI Image Generation</div>
+        <div class="activity-timing">Group — 30 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="activity-desc">This is where you use your own tools on your own problem — and generate 15–20 visual concepts in real time. The goal isn't to find your logo in this session. It's to generate a shared visual reference pool that everyone can point at and say "closer to that, less of that."</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="step-num">1</div><div>Use ChatGPT's DALL-E, Midjourney, or Adobe Firefly — whichever the group is most comfortable with. Project the screen so everyone sees results simultaneously.</div></li>
+        <li><div class="step-num">2</div><div>Run the prompts below one at a time. After each result, have the group call out: <em>"More like this / Less like this / Keep this element / Drop that element."</em> Iterate.</div></li>
+        <li><div class="step-num">3</div><div>Screenshot or download anything that gets a positive reaction — even partially. You're building a reference file, not selecting finals.</div></li>
+        <li><div class="step-num">4</div><div>End the activity by having each person pick their single favorite image from the session. Compare the four. The overlap is your visual direction.</div></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- AI PROMPTS -->
+  <div class="prompts-section">
+    <h3>Ready-to-Use Image Generation Prompts</h3>
+    <p class="sub">Copy and paste these directly into DALL-E, Midjourney, or Adobe Firefly. Modify after each result based on what the group responds to.</p>
+
+    <div class="prompt-card">
+      <div class="prompt-tag">Prompt 1 — Logo Territory</div>
+      <div class="prompt-text">Minimalist logo design for an AI education and development organization called Earthsight AI Consortium, based in Flagstaff Arizona. Incorporate dark sky astronomy, constellation lines, and high desert landscape. Deep navy and observatory gold color palette. Warm, trustworthy, grounded — not cold corporate tech. Clean vector style.</div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-tag">Prompt 2 — Flagstaff Identity</div>
+      <div class="prompt-text">Professional brand illustration: ponderosa pine silhouette against a star-filled night sky over a volcanic landscape, with subtle data visualization lines overlaid like constellation maps. Flagstaff Arizona dark sky community aesthetic. Earthy warm tones — sandstone, volcanic brown, observatory gold on deep midnight blue. Community-focused, not futuristic.</div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-tag">Prompt 3 — Community Feel</div>
+      <div class="prompt-text">Brand imagery for a human-centered AI organization in Northern Arizona. Diverse adults learning together, warm lighting, natural textures — wood, stone, ponderosa bark. Subtle AI visual elements integrated naturally, not dominant. Feel: a trusted guide, a community classroom, a clear-eyed view of the future. Warm, accessible, hopeful.</div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-tag">Prompt 4 — Abstract Mark</div>
+      <div class="prompt-text">Abstract icon mark for Earthsight AI: the concept of seeing clearly from above, combining a stylized eye or lens with geospatial grid lines and starfield. Simultaneously suggests satellite view, dark sky observation, and AI data. Colors: deep navy, gold, and white. Simple enough to work at small sizes. Not a robot, not a brain, not circuit boards.</div>
+    </div>
+
+    <div class="prompt-card">
+      <div class="prompt-tag">Prompt 5 — Social Media Feel</div>
+      <div class="prompt-text">Social media brand post template aesthetic for an AI education organization in Flagstaff AZ. Clean, modern layout with warm earthy colors — ponderosa green, sandstone, midnight blue, observatory gold. Typography space for headlines. Background texture suggests volcanic rock or high-altitude sky. Approachable to non-technical audience, 45–65 age range.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- COLOR PALETTE -->
+  <div class="palette-section">
+    <h2>Suggested Brand Color Palette</h2>
+    <p class="sub">Every color pulled from Flagstaff's natural and cultural landscape. Adjust in Activity 4 based on what your group responds to.</p>
+
+    <div class="palette-grid">
+      <div class="palette-card">
+        <div class="palette-chip" style="background:#0D1B2A;"></div>
+        <div class="palette-info">
+          <div class="palette-info-name">Midnight Sky</div>
+          <div class="palette-info-meaning">Dark sky protection, depth, clarity at night</div>
+          <div class="palette-info-hex">#0D1B2A</div>
+        </div>
+      </div>
+      <div class="palette-card">
+        <div class="palette-chip" style="background:#D4A843;"></div>
+        <div class="palette-info">
+          <div class="palette-info-name">Observatory Gold</div>
+          <div class="palette-info-meaning">Lowell Observatory dome, starlight, discovery</div>
+          <div class="palette-info-hex">#D4A843</div>
+        </div>
+      </div>
+      <div class="palette-card">
+        <div class="palette-chip" style="background:#C4956A;"></div>
+        <div class="palette-info">
+          <div class="palette-info-name">Sandstone</div>
+          <div class="palette-info-meaning">High desert earth, warmth, accessibility</div>
+          <div class="palette-info-hex">#C4956A</div>
+        </div>
+      </div>
+      <div class="palette-card">
+        <div class="palette-chip" style="background:#2D5A1B;"></div>
+        <div class="palette-info">
+          <div class="palette-info-name">Ponderosa</div>
+          <div class="palette-info-meaning">Ponderosa pine forest, sustainability, growth</div>
+          <div class="palette-info-hex">#2D5A1B</div>
+        </div>
+      </div>
+      <div class="palette-card">
+        <div class="palette-chip" style="background:#3D2B1F;"></div>
+        <div class="palette-info">
+          <div class="palette-info-name">Volcanic</div>
+          <div class="palette-info-meaning">Sunset Crater, ancient landscape, groundedness</div>
+          <div class="palette-info-hex">#3D2B1F</div>
+        </div>
+      </div>
+      <div class="palette-card">
+        <div class="palette-chip" style="background:#E8F4F8;"></div>
+        <div class="palette-info">
+          <div class="palette-info-name">Starlight</div>
+          <div class="palette-info-meaning">Clear sky, clarity, open possibility</div>
+          <div class="palette-info-hex">#E8F4F8</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- OUTPUTS -->
+  <div class="section-intro">
+    <h2>What to Walk Out With</h2>
+    <p>By the end of the visual brainstorming activities, you should have reached agreement on these four things. Write them on the whiteboard and photograph them before anyone leaves.</p>
+  </div>
+
+  <div style="display:grid; grid-template-columns: 1fr 1fr; gap:16px; margin-top:8px;">
+    <div style="border:1px solid #E0E0E0; border-radius:10px; padding:20px 22px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#888; margin-bottom:8px;">Output 1</div>
+      <div style="font-family:'Playfair Display',serif; font-size:16px; color:var(--midnight); margin-bottom:6px;">3–4 Core Visual Images</div>
+      <div style="font-size:13px; color:#555;">The images from Activity 1 and 2 that everyone pointed at and said "yes, that's us."</div>
+    </div>
+    <div style="border:1px solid #E0E0E0; border-radius:10px; padding:20px 22px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#888; margin-bottom:8px;">Output 2</div>
+      <div style="font-family:'Playfair Display',serif; font-size:16px; color:var(--midnight); margin-bottom:6px;">3 Non-Negotiable Brand Words</div>
+      <div style="font-size:13px; color:#555;">From the "We Are" column in Activity 3. These govern all content going forward.</div>
+    </div>
+    <div style="border:1px solid #E0E0E0; border-radius:10px; padding:20px 22px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#888; margin-bottom:8px;">Output 3</div>
+      <div style="font-family:'Playfair Display',serif; font-size:16px; color:var(--midnight); margin-bottom:6px;">Color Palette Direction</div>
+      <div style="font-size:13px; color:#555;">Dark-dominant or light-dominant, and 5–6 named colors with Flagstaff-specific names.</div>
+    </div>
+    <div style="border:1px solid #E0E0E0; border-radius:10px; padding:20px 22px;">
+      <div style="font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#888; margin-bottom:8px;">Output 4</div>
+      <div style="font-family:'Playfair Display',serif; font-size:16px; color:var(--midnight); margin-bottom:6px;">Visual Reference Folder</div>
+      <div style="font-size:13px; color:#555;">All screenshots from Activity 5, plus the 20 images from Activity 2. This goes to your interns as a design brief.</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <strong>Earthsight AI Consortium</strong>
+  Helping Northern Arizona see AI clearly — in classrooms, businesses, nonprofits, and city services.<br>
+  Moonshot Accelerator · Flagstaff, AZ · earthsightai.com
+</div>
+
+</body>
+</html>
