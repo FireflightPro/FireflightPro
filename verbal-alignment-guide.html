@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earthsight AI Consortium — Verbal Alignment Guide</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  :root {
+    --midnight: #0D1B2A;
+    --deep-sky: #1A2E45;
+    --starlight: #E8F4F8;
+    --pale-star: #C5DDE8;
+    --ponderosa: #2D5A1B;
+    --pine-light: #4A7C32;
+    --sandstone: #C4956A;
+    --sand-light: #F2DFC8;
+    --volcanic: #3D2B1F;
+    --obs-gold: #D4A843;
+    --obs-light: #F0D080;
+    --white: #FDFCFA;
+    --text-dark: #1A1A1A;
+    --border: #E2E2E2;
+    --bg-light: #F8F7F5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--white);
+    color: var(--text-dark);
+    line-height: 1.7;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--deep-sky);
+    background-image:
+      radial-gradient(ellipse at 10% 50%, rgba(196,149,106,0.15) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 30%, rgba(212,168,67,0.12) 0%, transparent 50%);
+    color: var(--starlight);
+    padding: 60px 52px 52px;
+    position: relative;
+  }
+
+  .guide-pair {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .guide-badge {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid rgba(212,168,67,0.5);
+    color: var(--obs-gold);
+  }
+
+  .guide-badge.active {
+    background: var(--obs-gold);
+    color: var(--midnight);
+    border-color: var(--obs-gold);
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--obs-gold);
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--pale-star);
+    font-weight: 300;
+    max-width: 560px;
+    margin-bottom: 36px;
+    line-height: 1.7;
+  }
+
+  .meta-row {
+    display: flex;
+    gap: 36px;
+    flex-wrap: wrap;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 28px;
+  }
+
+  .meta-item { display: flex; flex-direction: column; gap: 3px; }
+
+  .meta-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+  }
+
+  .meta-value {
+    font-size: 13px;
+    color: var(--starlight);
+  }
+
+  /* ── WHY THIS FIRST ── */
+  .why-section {
+    background: var(--sand-light);
+    border-left: 5px solid var(--sandstone);
+    padding: 40px 52px;
+  }
+
+  .why-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    color: var(--volcanic);
+    margin-bottom: 12px;
+  }
+
+  .why-section p {
+    font-size: 14.5px;
+    color: #4A3020;
+    max-width: 700px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+  }
+
+  .why-section p:last-child { margin-bottom: 0; }
+
+  /* ── MAIN ── */
+  .main {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 48px;
+  }
+
+  /* ── SECTION HEADERS ── */
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    color: var(--midnight);
+  }
+
+  .section-intro-text {
+    font-size: 14.5px;
+    color: #555;
+    max-width: 660px;
+    margin-bottom: 36px;
+    line-height: 1.8;
+  }
+
+  /* ── ACTIVITY CARDS ── */
+  .activity {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 44px;
+  }
+
+  .activity-header {
+    padding: 22px 28px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .act-num {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: white;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+
+  .act-meta { flex: 1; }
+
+  .act-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--midnight);
+    margin-bottom: 3px;
+  }
+
+  .act-timing {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #999;
+  }
+
+  .activity-body {
+    padding: 4px 28px 28px;
+  }
+
+  .act-desc {
+    font-size: 14px;
+    color: #444;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  .steps-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #999;
+    margin-bottom: 12px;
+  }
+
+  .steps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .steps li {
+    display: flex;
+    gap: 14px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.65;
+  }
+
+  .sn {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #EFEFEF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: 700;
+    color: #777;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .facilitator-note {
+    margin-top: 18px;
+    padding: 13px 18px;
+    background: var(--bg-light);
+    border-left: 3px solid var(--obs-gold);
+    border-radius: 0 6px 6px 0;
+    font-size: 13px;
+    color: #555;
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  .facilitator-note strong {
+    font-style: normal;
+    color: #333;
+    font-weight: 600;
+  }
+
+  /* ── WRITE-IN BOXES ── */
+  .write-in {
+    margin-top: 18px;
+    border: 1.5px dashed #CCC;
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: #FEFEFE;
+  }
+
+  .write-in-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #BBB;
+    margin-bottom: 10px;
+  }
+
+  .write-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .write-line {
+    border-bottom: 1px solid #DDD;
+    padding-bottom: 10px;
+    min-height: 28px;
+    font-size: 13px;
+    color: #CCC;
+    font-style: italic;
+  }
+
+  /* ── ACTIVITY COLOR SCHEMES ── */
+  .act-pw .act-num  { background: #888; }
+  .act-pw .activity-header { background: #F5F5F5; }
+
+  .act-1 .act-num  { background: var(--midnight); }
+  .act-1 .activity-header { background: #F6F7FB; }
+
+  .act-2 .act-num  { background: var(--volcanic); }
+  .act-2 .activity-header { background: #FBF8F5; }
+
+  .act-3 .act-num  { background: var(--ponderosa); }
+  .act-3 .activity-header { background: #F5F8F3; }
+
+  .act-4 .act-num  { background: #5B4DA0; }
+  .act-4 .activity-header { background: #F7F5FF; }
+
+  .act-5 .act-num  { background: #1A6B5A; }
+  .act-5 .activity-header { background: #F3FAF8; }
+
+  /* ── SO WHAT LADDER ── */
+  .ladder {
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .ladder-rung {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+    position: relative;
+  }
+
+  .rung-label-col {
+    width: 130px;
+    flex-shrink: 0;
+    padding-top: 10px;
+  }
+
+  .rung-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+  }
+
+  .rung-input {
+    flex: 1;
+    border: 1.5px dashed #CCC;
+    border-radius: 6px;
+    padding: 10px 14px;
+    min-height: 44px;
+    background: white;
+    font-size: 13px;
+    color: #BBB;
+    font-style: italic;
+  }
+
+  .rung-arrow {
+    text-align: center;
+    font-size: 20px;
+    color: var(--obs-gold);
+    padding: 4px 0;
+    margin-left: 144px;
+  }
+
+  .rung-sowhat {
+    background: var(--bg-light);
+    border: 1.5px dashed #C0B090;
+    border-radius: 6px;
+    padding: 8px 14px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #8B7340;
+    margin-left: 144px;
+    margin-top: -2px;
+    margin-bottom: 4px;
+    display: inline-block;
+  }
+
+  /* ── FRAMEWORK BOX ── */
+  .framework-box {
+    background: var(--midnight);
+    border-radius: 12px;
+    padding: 32px 36px;
+    margin: 20px 0;
+    color: var(--starlight);
+  }
+
+  .framework-box h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--obs-gold);
+    margin-bottom: 20px;
+  }
+
+  .framework-sentence {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    margin-bottom: 24px;
+    font-size: 15px;
+    line-height: 2;
+  }
+
+  .fw-word {
+    color: var(--pale-star);
+    font-weight: 300;
+  }
+
+  .fw-blank {
+    border-bottom: 2px solid var(--obs-gold);
+    min-width: 120px;
+    padding: 0 6px 2px;
+    color: var(--obs-gold);
+    font-weight: 600;
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .fw-hint {
+    font-size: 12px;
+    color: rgba(197,221,232,0.6);
+    font-style: italic;
+  }
+
+  .provocation-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+    margin-bottom: 14px;
+    margin-top: 8px;
+  }
+
+  .provocation {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 10px;
+  }
+
+  .prov-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--sandstone);
+    margin-bottom: 6px;
+  }
+
+  .prov-text {
+    font-size: 14px;
+    color: var(--starlight);
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .prov-note {
+    font-size: 12px;
+    color: rgba(197,221,232,0.6);
+    margin-top: 6px;
+    font-style: normal;
+  }
+
+  /* ── CLAUDE PROMPT BOX ── */
+  .claude-section {
+    background: #F0EDFF;
+    border: 1.5px solid #C8C0F0;
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 20px 0;
+  }
+
+  .claude-section h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #3A2F7A;
+    margin-bottom: 6px;
+    letter-spacing: 0.3px;
+  }
+
+  .claude-section p {
+    font-size: 13px;
+    color: #5A4FA0;
+    margin-bottom: 14px;
+    line-height: 1.7;
+  }
+
+  .prompt-box {
+    background: var(--midnight);
+    border-radius: 8px;
+    padding: 18px 20px;
+    font-size: 13px;
+    color: var(--starlight);
+    line-height: 1.8;
+    font-family: 'Inter', monospace;
+  }
+
+  .prompt-box .ph {
+    color: var(--obs-gold);
+    font-style: italic;
+  }
+
+  /* ── DIVIDER ── */
+  .divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, #D0D0D0, transparent);
+    margin: 48px 0;
+  }
+
+  /* ── DELIVERABLES ── */
+  .deliverables {
+    background: var(--midnight);
+    border-radius: 14px;
+    padding: 36px;
+    margin-top: 12px;
+  }
+
+  .deliverables h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: var(--obs-gold);
+    margin-bottom: 8px;
+  }
+
+  .deliverables .sub {
+    font-size: 13px;
+    color: var(--pale-star);
+    margin-bottom: 28px;
+  }
+
+  .deliverable-card {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 22px 24px;
+    margin-bottom: 14px;
+  }
+
+  .deliverable-card:last-child { margin-bottom: 0; }
+
+  .del-tag {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--obs-gold);
+    margin-bottom: 8px;
+  }
+
+  .del-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    color: var(--white);
+    margin-bottom: 6px;
+  }
+
+  .del-desc {
+    font-size: 13px;
+    color: var(--pale-star);
+    line-height: 1.7;
+  }
+
+  .del-lines {
+    margin-top: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .del-line {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 8px;
+    min-height: 28px;
+    font-size: 12px;
+    color: rgba(197,221,232,0.4);
+    font-style: italic;
+  }
+
+  /* ── JARGON WATCH ── */
+  .jargon-section {
+    background: #FFF8F0;
+    border: 1.5px solid #F0D0A0;
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-top: 24px;
+  }
+
+  .jargon-section h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #8B5A00;
+    margin-bottom: 14px;
+    letter-spacing: 0.3px;
+  }
+
+  .jargon-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .jargon-pair {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+  }
+
+  .jargon-bad {
+    color: #C0392B;
+    text-decoration: line-through;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+
+  .jargon-arrow { color: #AAA; flex-shrink: 0; }
+
+  .jargon-good {
+    color: #2D6A4F;
+    font-weight: 500;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    background: var(--midnight);
+    color: var(--pale-star);
+    text-align: center;
+    padding: 32px 48px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .footer-pair {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    font-size: 11px;
+    color: rgba(197,221,232,0.5);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .footer-sep { color: var(--obs-gold); }
+
+  @media (max-width: 640px) {
+    .hero { padding: 40px 24px; }
+    .hero h1 { font-size: 28px; }
+    .why-section { padding: 32px 24px; }
+    .main { padding: 40px 24px; }
+    .jargon-grid { grid-template-columns: 1fr; }
+    .ladder-rung { flex-direction: column; }
+    .rung-label-col { width: auto; }
+    .rung-arrow, .rung-sowhat { margin-left: 0; }
+  }
+
+  @media print {
+    body { font-size: 12px; }
+    .activity { break-inside: avoid; }
+    .deliverables { -webkit-print-color-adjust: exact; }
+    .hero { -webkit-print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="guide-pair">
+    <span class="guide-badge">Guide 1 of 2 — Verbal Alignment</span>
+    <span class="guide-badge">Guide 2 of 2 — Visual Branding  →  Apr 21</span>
+  </div>
+  <h1>Finding Your <em>Words</em></h1>
+  <p class="hero-sub">A facilitated session for aligning on the language of Earthsight AI Consortium — before design, before social media, before anything else goes public.</p>
+  <div class="meta-row">
+    <div class="meta-item">
+      <span class="meta-label">Use Before</span>
+      <span class="meta-value">Visual Branding Retreat (Apr 21)</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Format</span>
+      <span class="meta-value">Group — 4 Consortium Members</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Total Time</span>
+      <span class="meta-value">~90 Minutes</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-label">Facilitator</span>
+      <span class="meta-value">Ariel Strong</span>
+    </div>
+  </div>
+</div>
+
+<!-- WHY THIS FIRST -->
+<div class="why-section">
+  <h2>Why verbal clarity has to come before visual identity</h2>
+  <p>Logos, colors, and layouts are all expressions of a message. Without a clear, shared message underneath, visual design becomes decoration — it looks good but doesn't say anything specific. When four people with four specialties are trying to present as one organization, the words have to come first.</p>
+  <p>Your group's specific challenge: you're all technically fluent, which means your natural language skews toward <em>what you do</em> (services, tools, methods) rather than <em>what changes</em> for the people you help. This session is designed to close that gap — to get you to plain, specific, human language that a Flagstaff restaurant owner or school principal would immediately understand and respond to.</p>
+  <p>Everything produced here feeds directly into the April 21 visual session. Walk in with your words locked, and the branding work becomes dramatically faster.</p>
+</div>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- PRE-WORK -->
+  <div class="activity act-pw">
+    <div class="activity-header">
+      <div class="act-num" style="font-size:16px;">✦</div>
+      <div class="act-meta">
+        <div class="act-title">Pre-Work — Before the Meeting</div>
+        <div class="act-timing">Individual — 5 minutes per person</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="act-desc">Each member writes this down — by hand or in a note — <em>before</em> arriving. Do not talk to each other about it first. Uncoordinated first drafts are more honest and more revealing than polished group answers.</p>
+      <div class="steps-label">Write Your Answers To:</div>
+      <ul class="steps">
+        <li><div class="sn">1</div><div><strong>In one sentence:</strong> What does Earthsight AI Consortium do?</div></li>
+        <li><div class="sn">2</div><div><strong>In one sentence:</strong> Who is it for?</div></li>
+        <li><div class="sn">3</div><div><strong>In one sentence:</strong> What's different about your life or work after Earthsight helps you?</div></li>
+      </ul>
+      <div class="facilitator-note"><strong>Facilitator (Ariel):</strong> Collect these before the session starts. Read all four sets. Underline every word that appears in more than one person's answer — those are your through-lines. Circle every piece of jargon or technical language. Bring both lists to Activity 1. Do not share the answers with the group yet — wait until everyone is together.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 1 -->
+  <div class="activity act-1">
+    <div class="activity-header">
+      <div class="act-num">1</div>
+      <div class="act-meta">
+        <div class="act-title">The First Draft — Hear Yourselves</div>
+        <div class="act-timing">Group — 15 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="act-desc">Before you can fix your language, you need to hear what you're actually saying. This activity gets the unfiltered first drafts into the room so the group can see where they agree, where they diverge, and where the jargon hides.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="sn">1</div><div>Read each person's three answers aloud, one at a time — no commentary yet. Just listen.</div></li>
+        <li><div class="sn">2</div><div>On the whiteboard, write two columns: <strong>SHARED LANGUAGE</strong> (words or phrases that appeared in multiple answers) and <strong>JARGON WATCH</strong> (technical terms, acronyms, or insider language a non-technical person might not understand).</div></li>
+        <li><div class="sn">3</div><div>Give the group 2 minutes to call out additions to both columns. No debate — just capture everything.</div></li>
+        <li><div class="sn">4</div><div>Ask: if a neighbor read these answers, what questions would they still have? Write those questions down — they reveal your messaging gaps.</div></li>
+      </ul>
+
+      <div class="jargon-section">
+        <h4>⚠ Common Jargon to Watch For — Replace Before You Go Public</h4>
+        <div class="jargon-grid">
+          <div class="jargon-pair"><span class="jargon-bad">LLM</span><span class="jargon-arrow">→</span><span class="jargon-good">AI assistant</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">AI implementation</span><span class="jargon-arrow">→</span><span class="jargon-good">putting AI to work in your business</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">prompt engineering</span><span class="jargon-arrow">→</span><span class="jargon-good">learning to communicate with AI</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">AI-forward</span><span class="jargon-arrow">→</span><span class="jargon-good">ready for what's coming</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">generative AI</span><span class="jargon-arrow">→</span><span class="jargon-good">AI that creates — text, images, ideas</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">AI ecosystem</span><span class="jargon-arrow">→</span><span class="jargon-good">the range of AI tools available</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">sustainable AI practices</span><span class="jargon-arrow">→</span><span class="jargon-good">using AI responsibly and safely</span></div>
+          <div class="jargon-pair"><span class="jargon-bad">consortium</span><span class="jargon-arrow">→</span><span class="jargon-good">a team of local AI experts (keep "consortium" for formal use only)</span></div>
+        </div>
+      </div>
+
+      <div class="facilitator-note"><strong>What you're listening for:</strong> The moment someone says something that makes the rest of the group say "yes — <em>that's</em> it." That phrasing is your gold. Write it down exactly as spoken. Natural speech is almost always more accessible than written language.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 2 -->
+  <div class="activity act-2">
+    <div class="activity-header">
+      <div class="act-num">2</div>
+      <div class="act-meta">
+        <div class="act-title">The "So What?" Ladder</div>
+        <div class="act-timing">Group — 20 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="act-desc">Technical communicators describe what they do. Effective communicators describe what <em>changes</em> for the people they help. The "So What?" ladder forces you down from service description to human outcome — the level where your message actually lands.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="sn">1</div><div>Choose the most jargon-heavy or technical sentence from Activity 1. Write it on the board — this is Rung 1.</div></li>
+        <li><div class="sn">2</div><div>Ask the group: <strong>"So what does that mean for the person you're helping?"</strong> Write the answer on Rung 2.</div></li>
+        <li><div class="sn">3</div><div>Ask again: <strong>"And so what does <em>that</em> mean for them?"</strong> Rung 3.</div></li>
+        <li><div class="sn">4</div><div>Repeat until the answer is something a non-technical person would say in real life. Usually 3–4 rungs. The bottom rung is almost always the truest version of your message.</div></li>
+        <li><div class="sn">5</div><div>Run the ladder a second time with a different starting sentence — one from a different member's specialty. Compare the bottom rungs. Are you arriving at similar places?</div></li>
+      </ul>
+
+      <div class="ladder">
+        <div class="steps-label" style="margin-bottom:16px;">The Ladder — Fill In During the Activity</div>
+
+        <div class="ladder-rung">
+          <div class="rung-label-col"><span class="rung-label" style="color:var(--volcanic);">Rung 1<br><small style="font-weight:400;color:#999;">technical start</small></span></div>
+          <div class="rung-input">Write your starting sentence here…</div>
+        </div>
+        <div class="rung-arrow">↓</div>
+        <div class="rung-sowhat">So what does that mean for the person you're helping?</div>
+
+        <div class="ladder-rung" style="margin-top:8px;">
+          <div class="rung-label-col"><span class="rung-label" style="color:#7A5030;">Rung 2</span></div>
+          <div class="rung-input">Answer here…</div>
+        </div>
+        <div class="rung-arrow">↓</div>
+        <div class="rung-sowhat">And so what does <em>that</em> mean for them?</div>
+
+        <div class="ladder-rung" style="margin-top:8px;">
+          <div class="rung-label-col"><span class="rung-label" style="color:#2D7A50;">Rung 3</span></div>
+          <div class="rung-input">Getting warmer…</div>
+        </div>
+        <div class="rung-arrow">↓</div>
+        <div class="rung-sowhat">Keep going — what's the real human result?</div>
+
+        <div class="ladder-rung" style="margin-top:8px;">
+          <div class="rung-label-col"><span class="rung-label" style="color:var(--ponderosa);">Rung 4<br><small style="font-weight:400;color:#999;">human truth</small></span></div>
+          <div class="rung-input">This is your message. ✦</div>
+        </div>
+      </div>
+
+      <div class="facilitator-note"><strong>Example to demonstrate the technique if the group gets stuck:</strong> Start with "We provide AI implementation services for SMEs in the wildland-urban interface." So what? → "We help small businesses use AI tools in their work." So what? → "They save time and stop doing the same tasks manually every week." So what? → "They can focus on what actually matters in their business instead of drowning in busy work." That last sentence is the message. Notice it has no jargon and a non-technical person would nod immediately.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 3 -->
+  <div class="activity act-3">
+    <div class="activity-header">
+      <div class="act-num">3</div>
+      <div class="act-meta">
+        <div class="act-title">The Neighbor Test — 60 Seconds, No Notes</div>
+        <div class="act-timing">Individual + Group — 20 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="act-desc">Natural speech is usually more accessible than written language. This test captures how each of you actually talks about Earthsight when you're not in "professional mode" — and that spoken version is often closer to your real message than anything written.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="sn">1</div><div>Each person takes 60 seconds to explain Earthsight to an imaginary non-technical neighbor at a backyard barbecue. No notes. Record each one on a phone or laptop. (Do it one at a time so others can listen.)</div></li>
+        <li><div class="sn">2</div><div>Play each recording back. As a group, listen for: words that keep appearing across all four recordings, moments where the explanation suddenly clicked into plain language, and anything that made someone in the room nod or lean in.</div></li>
+        <li><div class="sn">3</div><div>Write the standout phrases on the whiteboard. These are your raw material.</div></li>
+        <li><div class="sn">4</div><div>Ask: which of these recordings would make a Flagstaff restaurant owner pick up the phone? That recording wins. Why? What did it do differently?</div></li>
+      </ul>
+
+      <div class="write-in">
+        <div class="write-in-label">Capture Here — Phrases Worth Keeping</div>
+        <div class="write-lines">
+          <div class="write-line">Member 1 — standout phrase: _______________</div>
+          <div class="write-line">Member 2 — standout phrase: _______________</div>
+          <div class="write-line">Member 3 — standout phrase: _______________</div>
+          <div class="write-line">Member 4 — standout phrase: _______________</div>
+          <div class="write-line">Words that appeared in 3+ recordings: _______________</div>
+        </div>
+      </div>
+
+      <div class="facilitator-note"><strong>Why this works:</strong> The 60-second constraint prevents over-engineering. The barbecue framing lowers the emotional stakes. People almost always find a phrase in their spoken version that they'd never write — and that phrase is usually the most authentic one.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 4 — CLAUDE -->
+  <div class="activity act-4">
+    <div class="activity-header">
+      <div class="act-num">4</div>
+      <div class="act-meta">
+        <div class="act-title">The Live Claude Synthesis — Use Your Own Tools</div>
+        <div class="act-timing">Group — 15 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="act-desc">This is the meta-moment: use AI to synthesize your own messaging, in real time, on a shared screen. It's fast, removes ego from the process (no one is attached to Claude's phrasing), and — not incidentally — is a live demonstration of exactly what you teach others to do.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="sn">1</div><div>Each person writes 3–4 sentences describing: (a) what they personally bring to Earthsight, and (b) who they help and how. This takes 3 minutes.</div></li>
+        <li><div class="sn">2</div><div>Paste all four descriptions into Claude using the prompt below. Project the screen so everyone sees the output simultaneously.</div></li>
+        <li><div class="sn">3</div><div>Read the output aloud. Mark anything that feels right with a ✓, anything that feels off with an ✗. Ask: what did Claude get right that we haven't said to each other yet?</div></li>
+        <li><div class="sn">4</div><div>Iterate once — give Claude the marked output and ask it to adjust based on your reactions.</div></li>
+      </ul>
+
+      <div class="claude-section">
+        <h4>Copy this prompt into Claude — paste all four member descriptions below it</h4>
+        <p>Replace the bracketed placeholders with your actual descriptions before submitting.</p>
+        <div class="prompt-box">Here are four descriptions from the four members of Earthsight AI Consortium, a collaborative AI practice based in Flagstaff, AZ, operating out of the Moonshot business accelerator. We have backing from the City of Flagstaff Economic Development Office. Our four areas of specialization are: K–12 AI education, adult learning and workforce coaching, business AI development and integration, and nonprofit/sustainability AI applications.<br><br><span class="ph">[MEMBER 1 DESCRIPTION — paste here]</span><br><br><span class="ph">[MEMBER 2 DESCRIPTION — paste here]</span><br><br><span class="ph">[MEMBER 3 DESCRIPTION — paste here]</span><br><br><span class="ph">[MEMBER 4 DESCRIPTION — paste here]</span><br><br>Please do the following:<br>1. Find the 3–5 words or phrases that appear across all four descriptions. These are our through-line.<br>2. Write three versions of a one-sentence mission statement a non-technical Flagstaff business owner would understand immediately.<br>3. Flag any jargon, acronyms, or technical terms a non-AI person might not understand.<br>4. Give us the simplest possible answer — one sentence — to: "What does Earthsight AI Consortium do?"<br>5. Suggest what's missing from these descriptions that a potential client would probably want to know.</div>
+      </div>
+
+      <div class="facilitator-note"><strong>What this produces:</strong> Three candidate mission statements with no author attached to any of them, which makes it much easier to evaluate them on merit. The "what's missing" output is often the most useful — it surfaces questions your target audience will have that you haven't answered yet.</div>
+    </div>
+  </div>
+
+  <!-- ACTIVITY 5 — FRAMEWORK -->
+  <div class="activity act-5">
+    <div class="activity-header">
+      <div class="act-num">5</div>
+      <div class="act-meta">
+        <div class="act-title">We Help X Do Y So That Z — Lock the Framework</div>
+        <div class="act-timing">Group — 20 minutes</div>
+      </div>
+    </div>
+    <div class="activity-body">
+      <p class="act-desc">This is your core positioning sentence — the sentence that, once locked, governs everything from your social media bio to your grant applications to how each member introduces themselves at events. The "so that Z" clause is the hardest part, and it's also the most important: it forces you off service description and onto human outcome.</p>
+      <div class="steps-label">How to Run It</div>
+      <ul class="steps">
+        <li><div class="sn">1</div><div>Start with the three provocations below. React to them together — mark what's right, what's wrong, what's missing. Do not try to polish one of these. Use them as targets to push against.</div></li>
+        <li><div class="sn">2</div><div>Write five of your own versions of the framework. Quantity over quality at first — go fast. No one edits mid-flight.</div></li>
+        <li><div class="sn">3</div><div>Read each version aloud. The group votes: closer or further? Iterate toward the version that makes everyone feel seen and accurately described.</div></li>
+        <li><div class="sn">4</div><div>Test the winner: would a Flagstaff restaurant owner understand it? Would it work on a grant application? Would your mom understand what you do from this one sentence? It needs to pass all three.</div></li>
+      </ul>
+
+      <div class="framework-box">
+        <h3>The Framework</h3>
+        <div class="framework-sentence">
+          <span class="fw-word">We help</span>
+          <span class="fw-blank">who you serve</span>
+          <span class="fw-word">do</span>
+          <span class="fw-blank">what they can do with you</span>
+          <span class="fw-word">so that</span>
+          <span class="fw-blank">what changes in their life or work</span>
+          <span class="fw-word">.</span>
+        </div>
+        <p class="fw-hint">Tip: "so that" should describe a change the person cares about — not a service you deliver. If "so that" sounds like something you do, push one level further.</p>
+
+        <div class="provocation-label">Three Starter Provocations — React to These, Don't Refine Them</div>
+
+        <div class="provocation">
+          <div class="prov-tag">Version A — Community Focused</div>
+          <div class="prov-text">"We help Northern Arizona businesses, schools, and organizations understand and use AI confidently, so our community thrives as the world changes around it."</div>
+          <div class="prov-note">Strong on geography and community outcome. May be too broad — "businesses, schools, and organizations" is almost everyone.</div>
+        </div>
+
+        <div class="provocation">
+          <div class="prov-tag">Version B — Outcome Focused</div>
+          <div class="prov-text">"We help Flagstaff's people and organizations get ahead of the AI curve — practically, safely, and on their own terms."</div>
+          <div class="prov-note">Punchy and human. "On their own terms" does a lot of work. May need more specificity for grant audiences.</div>
+        </div>
+
+        <div class="provocation">
+          <div class="prov-tag">Version C — Full Spectrum</div>
+          <div class="prov-text">"We are Flagstaff's end-to-end AI partner — educating students, training workers, building tools, and connecting our community to an AI-powered future that works for everyone."</div>
+          <div class="prov-note">Covers all four specialties explicitly. Longer, but clear. Good for grant applications and formal introductions. Too long for social bios.</div>
+        </div>
+      </div>
+
+      <div class="write-in" style="margin-top:20px;">
+        <div class="write-in-label">Write Your Five Versions Here</div>
+        <div class="write-lines">
+          <div class="write-line">We help _____________ do _____________ so that _____________.</div>
+          <div class="write-line">We help _____________ do _____________ so that _____________.</div>
+          <div class="write-line">We help _____________ do _____________ so that _____________.</div>
+          <div class="write-line">We help _____________ do _____________ so that _____________.</div>
+          <div class="write-line">We help _____________ do _____________ so that _____________.</div>
+        </div>
+      </div>
+
+      <div class="facilitator-note"><strong>One more thing:</strong> Once you have a winner, each member should also complete this sentence individually: "I specifically help [my audience] do [my specialty] as part of Earthsight's [overall mission]." These become the one-liners each person uses when they introduce themselves — consistent with the group mission, specific to their work.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- DELIVERABLES -->
+  <div class="deliverables">
+    <h2>Walk Out With These Four Things</h2>
+    <p class="sub">Write these on the whiteboard and photograph them before anyone leaves. They go directly into the April 21 visual session — and into your first social media posts.</p>
+
+    <div class="deliverable-card">
+      <div class="del-tag">Deliverable 1</div>
+      <div class="del-title">The Elevator Sentence</div>
+      <div class="del-desc">One sentence, fifteen words or fewer. All four of you can say it without thinking. Plain enough for your neighbor, specific enough for a grant officer.</div>
+      <div class="del-lines">
+        <div class="del-line">Final sentence: _______________________________________________</div>
+      </div>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="del-tag">Deliverable 2</div>
+      <div class="del-title">Five Service Bullet Points</div>
+      <div class="del-desc">Specific, jargon-free, and written from the client's perspective ("You get..." not "We offer..."). These become your website About section and your social bios.</div>
+      <div class="del-lines">
+        <div class="del-line">•  _______________________________________________</div>
+        <div class="del-line">•  _______________________________________________</div>
+        <div class="del-line">•  _______________________________________________</div>
+        <div class="del-line">•  _______________________________________________</div>
+        <div class="del-line">•  _______________________________________________</div>
+      </div>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="del-tag">Deliverable 3</div>
+      <div class="del-title">One Sentence Per Member</div>
+      <div class="del-desc">Each person's individual specialty connected to the overall mission. Used for introductions at events, personal bios, and social profiles.</div>
+      <div class="del-lines">
+        <div class="del-line">Member 1: _______________________________________________</div>
+        <div class="del-line">Member 2: _______________________________________________</div>
+        <div class="del-line">Member 3: _______________________________________________</div>
+        <div class="del-line">Member 4: _______________________________________________</div>
+      </div>
+    </div>
+
+    <div class="deliverable-card">
+      <div class="del-tag">Deliverable 4</div>
+      <div class="del-title">Three Words That Are Always Off-Limits</div>
+      <div class="del-desc">The three jargon terms or corporate-speak phrases you agreed to never use in public-facing communications. Post these somewhere visible for interns and collaborators.</div>
+      <div class="del-lines">
+        <div class="del-line">Never say: _______________  _______________  _______________</div>
+        <div class="del-line">Instead say: _______________  _______________  _______________</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <div class="footer-pair">
+    <span>Guide 1 of 2</span>
+    <span class="footer-sep">✦</span>
+    <span>Verbal Alignment — Complete Before April 21</span>
+    <span class="footer-sep">✦</span>
+    <span>Earthsight AI Consortium · Flagstaff, AZ</span>
+  </div>
+  <div style="color:rgba(197,221,232,0.35); font-size:11px; margin-top:4px;">Pairs with: Earthsight AI Consortium — Brand Retreat Guide</div>
+</div>
+
+</body>
+</html>
